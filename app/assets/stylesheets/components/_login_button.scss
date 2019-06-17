@@ -1,0 +1,46 @@
+/*
+Add this row to the html.erb:
+<div class="login_button" style="vertical-align:middle"><span>Join </span></div>
+evt...
+<button class="login_button" style="vertical-align:middle"><span>Join </span></button>
+*/
+
+.login_button {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #346EB5;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.login_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.login_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.login_button:hover span {
+  padding-right: 25px;
+}
+
+.login_button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
