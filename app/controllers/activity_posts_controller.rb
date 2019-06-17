@@ -2,7 +2,7 @@ class ActivityPostsController < ApplicationController
   before_action :set_activity_post, only: [:show, :destroy]
 
   def index         # GET /restaurants
-    @activity_posts = Activity_post.all
+    @activity_posts = ActivityPost.all
   end
 
   def show          # GET /restaurants/:id
@@ -10,15 +10,15 @@ class ActivityPostsController < ApplicationController
   end
 
   def show_my
-    @my_activity_posts = Activity_post.where(user_id: current_user).order(stat_time: :asc)
+    @my_activity_posts = ActivityPost.where(user_id: current_user).order(stat_time: :asc)
   end
 
   def new           # GET /restaurants/new
-    @activity_post = Activity_post.new
+    @activity_post = ActivityPost.new
   end
 
   def create        # POST /restaurants
-    @activity_post = Activity_post.new(activity_post_params)
+    @activity_post = ActivityPost.new(activity_post_params)
     @activity_post.user = current_user
     if @activity_post.save
       redirect_to activity_posts_path
