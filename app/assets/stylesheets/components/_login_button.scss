@@ -1,0 +1,25 @@
+/* Initial login button - change colors */
+
+.login_button {
+  -webkit-font-smoothing: antialiased;
+  background-color: #222;
+  border: none;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85em;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 0.1em;
+  color: white;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.1s ease-out;
+  -moz-transition: background-color 0.1s ease-out;
+  transition: background-color 0.1s ease-out; }
+  .login_button:hover {
+    background-color: #2CD892;
+    color: #fff; }
+  .login_button:focus {
+    outline: none;
+    color: #fff; }
