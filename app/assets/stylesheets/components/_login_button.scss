@@ -1,25 +1,46 @@
-/* Initial login button - change colors */
+/*
+Add this row to the html.erb:
+<div class="login_button" style="vertical-align:middle"><span>Join </span></div>
+evt...
+<button class="login_button" style="vertical-align:middle"><span>Join </span></button>
+*/
 
 .login_button {
-  -webkit-font-smoothing: antialiased;
-  background-color: #222;
-  border: none;
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85em;
-  font-weight: 700;
-  text-decoration: none;
-  user-select: none;
-  letter-spacing: 0.1em;
-  color: white;
-  padding: 20px 40px;
-  text-transform: uppercase;
-  -webkit-transition: background-color 0.1s ease-out;
-  -moz-transition: background-color 0.1s ease-out;
-  transition: background-color 0.1s ease-out; }
-  .login_button:hover {
-    background-color: #2CD892;
-    color: #fff; }
-  .login_button:focus {
-    outline: none;
-    color: #fff; }
+  border-radius: 10px;
+  background-color: #346EB5;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.login_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.login_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.login_button:hover span {
+  padding-right: 25px;
+}
+
+.login_button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
