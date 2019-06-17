@@ -18,10 +18,10 @@ user_b = User.create!(email: "test2@email.com", password: "123456", first_name: 
 user_c = User.create!(email: "test3@email.com", password: "123456", first_name: "Johan", last_name: "H", username: "Johak11")
 
 # Generate the test categories
-category_1 = Category.create!(name: "walking")
-category_2 = Category.create!(name: "fika")
-category_3 = Category.create!(name: "lunch")
-category_4 = Category.create!(name: "padel")
+category_1 = Category.create!(name: "Walking")
+category_2 = Category.create!(name: "Fika")
+category_3 = Category.create!(name: "Lunch")
+category_4 = Category.create!(name: "Padel")
 
 # Generate a number of test activities
 activity_post_1 = ActivityPost.create!(description: "I plan to take a walk around the IKEA building", start_time: "2019-06-28 12:45", duration: 15, capacity: 2, title: "Walk and not talk", category_id: category_1.id , user_id: user_a.id)
@@ -37,3 +37,13 @@ activity_post_8 = ActivityPost.create!(description: "I'm having lunch at the can
 activity_post_9 = ActivityPost.create!(description: "Lunch?", start_time: "2019-06-28 12:00", duration: 30, capacity: 2, title: "Lunch at Hubhult", category_id: category_3.id , user_id: user_a.id)
 activity_post_10 = ActivityPost.create!(description: "I plan to take eat at ChopChop", start_time: "2019-06-28 12:15", duration: 30, capacity: 4, title: "Asian food time", category_id: category_3.id , user_id: user_b.id)
 activity_post_11 = ActivityPost.create!(description: "I want to eat and have my idea for the new app challenged", start_time: "2019-06-28 11:50", duration: 45, capacity: 2, title: "Lunch and debate?", category_id: category_3.id , user_id: user_b.id)
+
+# Generate a number of bookings
+booking_1 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_6.id)
+booking_1 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_10.id)
+booking_1 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_11.id)
+booking_1 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_3.id)
+
+
+
+

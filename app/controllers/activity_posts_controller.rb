@@ -6,16 +6,15 @@ class ActivityPostsController < ApplicationController
   end
 
   def show          # GET /restaurants/:id
-
   end
 
   def show_my
-    @my_activity_posts = ActivityPost.where(user_id: current_user).order(stat_time: :asc)
+    @my_activity_posts_hosting = ActivityPost.where(user_id: current_user).order(start_time: :asc)
+    @my_activity_post_joined = ActivityUser.where(user_id: current_user)
   end
 
   def new           # GET /restaurants/new
     @activity_post = ActivityPost.new
-
   end
 
   def create        # POST /restaurants
