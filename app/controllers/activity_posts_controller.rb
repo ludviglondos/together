@@ -15,6 +15,7 @@ class ActivityPostsController < ApplicationController
 
   def new           # GET /restaurants/new
     @activity_post = ActivityPost.new
+
   end
 
   def create        # POST /restaurants
