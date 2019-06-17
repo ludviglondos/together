@@ -46,6 +46,6 @@ class ActivityPostsController < ApplicationController
   end
 
   def activity_post_params
-    params.require(:activity_post).permit(:description, :start_time, :duration, :capacity, :title)
+    params.require(:activity_post).permit(:description, :start_time, :duration, :capacity, :title, :category_id)
   end
 end
