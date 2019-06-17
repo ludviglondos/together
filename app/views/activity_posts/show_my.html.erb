@@ -1,3 +1,17 @@
-<h1>This is the my bookings page!</h1>
+<h1>This is my activity page!</h1>
+<div class="d-flex">
+  <div>
+    <h2>Upcoming Activities</h2>
+    <% @my_activity_post_joined.each do |post| %>
+    <h3><%= post.activity_post.category.name %></h3>
+    <% end %>
+  </div>
+  <div>
+    <h2>Activities Im hosting</h2>
+    <%@my_activity_posts_hosting.each do |post| %>
+      <h3><%= post.title %></h3>
+    <% end %>
+  </div>
+</div>
 
 <%= link_to "Index-page", root_path  %>
