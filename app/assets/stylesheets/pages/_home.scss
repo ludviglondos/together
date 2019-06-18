@@ -1,1 +1,40 @@
 // Specific CSS for your home-page
+
+body {
+background: white;
+
+}
+
+h1 {
+  color: #233D95;
+  // text-shadow: 2px 2px 4px #000000;
+}
+
+p {
+ color: black;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+.wrapper{
+  width: 30%;
+  height: 30%;
+  background: white;
+  margin: auto;
+  position: relative;
+  box-shadow: 0;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+  &:hover{
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+    }
+  }
