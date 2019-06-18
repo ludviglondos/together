@@ -3,7 +3,7 @@
   <div>
     <h2>Upcoming Activities</h2>
     <% @my_activity_post_joined.each do |post| %>
-    <h3><%= post.activity_post.category.name %></h3>
+    <h3><%= link_to post.activity_post.category.name, activity_post_path(post.activity_post_id) %></h3>
     <% end %>
   </div>
   <div>

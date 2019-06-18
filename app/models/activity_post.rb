@@ -10,4 +10,5 @@ class ActivityPost < ApplicationRecord
   belongs_to :category
   belongs_to :user
   has_many :activity_users, dependent: :destroy
+  has_many :users, through: :activity_users
 end
