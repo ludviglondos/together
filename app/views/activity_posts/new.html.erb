@@ -1,8 +1,13 @@
 <h1>This is the page for creating a new post</h1>
-
 <div>
-  <h2 class="text-center">Add a new activity</h2>
-  <%= render 'shared/form_activity_post', activity_post: @activity_post %>
+  <h2>Quick create</h2>
+  <%= render 'shared/form_quick_create', activity_post: @activity_post_default %>
+
+
+</div>
+<div>
+  <h2 class="text-center">More options</h2>
+  <%= render 'shared/form_advance_activity_post', activity_post: @activity_post %>
 </div>
 
 <%= link_to "Landing-page", root_path  %>
