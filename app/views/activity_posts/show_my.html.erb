@@ -9,7 +9,7 @@
   <div>
     <h2>Activities Im hosting</h2>
     <%@my_activity_posts_hosting.each do |post| %>
-      <h3><%= post.title %></h3>
+      <h3><%= link_to post.title, activity_post_path(post.id)  %></h3>
     <% end %>
   </div>
 </div>
