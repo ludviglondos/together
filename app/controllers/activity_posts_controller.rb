@@ -1,5 +1,5 @@
 class ActivityPostsController < ApplicationController
-  before_action :set_activity_post, only: [:show, :destroy]
+  before_action :set_activity_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @activity_posts = ActivityPost.all
@@ -13,8 +13,9 @@ class ActivityPostsController < ApplicationController
   end
 
   def show_my
-    @my_activity_posts_hosting = current_user.activity_posts.order(start_time: :asc)
     @my_activity_post_joined = current_user.activity_users
+    @my_activity_posts_hosting = current_user.activity_posts.order(start_time: :asc)
+
   end
 
   def new
@@ -50,11 +51,14 @@ class ActivityPostsController < ApplicationController
   end
 
   def update
+    @activity_post.update(activity_post_params)
+    redirect_to my_activities_path
   end
 
   def destroy
     @activity_post.destroy
-    redirect_to activity_posts_path
+    #add alert
+    redirect_to my_activities_path
   end
 
   private
@@ -64,10 +68,6 @@ class ActivityPostsController < ApplicationController
   end
 
   def activity_post_params
-    params.require(:activity_post).permit(:description, :start_time, :duration, :capacity, :title, :category_id)
-  end
-
-  def activity_post_default_params
     params.require(:activity_post).permit(:description, :start_time, :duration, :capacity, :title, :category_id)
   end
 end

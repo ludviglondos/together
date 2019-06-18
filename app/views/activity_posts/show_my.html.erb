@@ -1,16 +1,32 @@
 <h1>This is my activity page!</h1>
-<div class="d-flex">
+<div>
   <div>
     <h2>Upcoming Activities</h2>
-    <% @my_activity_post_joined.each do |post| %>
-    <h3><%= link_to post.activity_post.category.name, activity_post_path(post.activity_post_id) %></h3>
-    <% end %>
+    <div class="d-flex">
+      <% @my_activity_post_joined.each do |activity| %>
+        <div class="card_standard">
+          <div class="card_standard_container">
+            <h2><%=activity.activity_post.category.name%></h2>
+            <h2><%=activity.activity_post.start_time %></h2>
+            <%= link_to "Cancel", activity_user_path(activity), method: :delete  %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
   <div>
     <h2>Activities Im hosting</h2>
-    <%@my_activity_posts_hosting.each do |post| %>
-      <h3><%= link_to post.title, activity_post_path(post.id)  %></h3>
-    <% end %>
+    <div class="d-flex">
+      <%@my_activity_posts_hosting.each do |post| %>
+        <div class="card_standard">
+          <div class="card_standard_container">
+            <h2><%=post.title%></h2>
+            <%= link_to "Edit Activity", edit_activity_post_path(post.id) %>
+            <%= link_to "Cancel Activity", activity_post_path(post.id), method: :delete  %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
