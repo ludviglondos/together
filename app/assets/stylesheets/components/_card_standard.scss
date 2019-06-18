@@ -1,0 +1,53 @@
+/* Standard card to be used for e.g. viewing "My bookings" */
+
+.card_standard {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 10px;
+  border-radius: 10px;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+  &:hover{
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+  }
+}
+
+.card_standard > img {
+  // height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card_standard h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card_standard p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card_standard .card_standard-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.card_standard-infos .card_standard-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.far.fa-lightbulb {
+  margin-right: 2px;
+}
