@@ -1,11 +1,11 @@
 /*
 Add this row to the html.erb:
-<div class="login_button" style="vertical-align:middle"><span>Join </span></div>
+<div class="join_button" style="vertical-align:middle"><span>Join </span></div>
 evt...
-<button class="login_button" style="vertical-align:middle"><span>Join </span></button>
+<button class="join_button" style="vertical-align:middle"><span>Join </span></button>
 */
 
-.login_button {
+.join_button {
   display: inline-block;
   border-radius: 10px;
   background-color: #346EB5;
@@ -20,14 +20,14 @@ evt...
   margin: 5px;
 }
 
-.login_button span {
+.join_button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.login_button span:after {
+.join_button span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -36,11 +36,11 @@ evt...
   transition: 0.5s;
 }
 
-.login_button:hover span {
+.join_button:hover span {
   padding-right: 25px;
 }
 
-.login_button:hover span:after {
+.join_button:hover span:after {
   opacity: 1;
   right: 0;
 }
