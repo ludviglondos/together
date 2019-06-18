@@ -1,13 +1,8 @@
 /* Standard card to be used for e.g. viewing "My bookings" */
-.box {
-  width: 200px;
-  background-color: red;
-  height: 100%;
-}
-
 
 .card_standard_container {
-  padding: 50px 60px;
+  padding: 10px 10px;
+  width: 100%
 }
 
 .card_standard {
@@ -26,8 +21,10 @@
 }
 
 .card_standard > img {
+  padding: 10px;
   height: 100px;
-  object-fit: cover;
+  width: 100%;
+  object-fit: scale-down;
   border-radius: 10px 10px 0px 0px;
 }
 
