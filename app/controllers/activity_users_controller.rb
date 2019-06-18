@@ -24,8 +24,4 @@ class ActivityUsersController < ApplicationController
   def set_activity_user
     @activity_user = ActivityUser.find(params[:id])
   end
-
-  def activity_user_params
-    params.require(:activity_post).permit(:id)
-  end
 end
