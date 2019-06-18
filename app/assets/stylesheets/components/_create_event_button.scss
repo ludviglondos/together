@@ -1,0 +1,44 @@
+/*dent around button*/
+.create_event_button{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    // color: rgba(0, 133, 66, 0.54);
+    color: rgba(3, 169, 244, 0.54);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    background: #f7f7f7;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+/*Button itself*/
+.create_event_button .fa {
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    vertical-align: middle;
+    left: 10px;
+    top: 9px;
+    border-radius: 50%;
+    font-size: 40px;
+    background-image: -webkit-linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+    background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #b5b5b5;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.5s;
+    &:hover{
+    transform: scale(1.1);
+  }
+  }
+
+.create_event_button .fa:active{
+    background-image: -webkit-linear-gradient(#efefef 0%, #d6d6d6 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #d8d8d8;
+}
