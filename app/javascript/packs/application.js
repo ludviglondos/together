@@ -1,7 +1,7 @@
 import "bootstrap";
 import "../plugins/flatpickr"
 
-
+// Javascript function for exanding the menu from the button //
 
 $(document).ready(function() {
     $(".cards_expanded").hide();
