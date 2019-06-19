@@ -10,6 +10,14 @@ $(document).ready(function() {
     });
 });
 
+// Javascript function for exanding the Create options from the button //
+
+$(document).ready(function() {
+    $(".cards_expanded_options").hide();
+    $(".create_event_button").click(function(){
+      $(".cards_expanded_options").slideToggle("swing");
+    });
+});
 
 //Javascript for navBarToggle -- going from bars to cross
 $(document).ready(function() {
