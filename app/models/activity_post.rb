@@ -11,4 +11,10 @@ class ActivityPost < ApplicationRecord
   belongs_to :user
   has_many :activity_users, dependent: :destroy
   has_many :users, through: :activity_users
+
+  scope :todays_activities, -> { where(start_time: Date.today.all_day) }
+
+  def self.on_date(date)
+    where(start_time: date.all_day)
+  end
 end
