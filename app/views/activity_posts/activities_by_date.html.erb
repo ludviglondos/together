@@ -13,9 +13,10 @@
 </div>
 
 <% @categories.each do |category| %>
-<div style="height: 100px; width: 200px; border: 1px solid black;">
-  <h1><%= category.name %></h1>
-</div>
+  <div class="banner-container">
+      <img src=<%= category.url %>>
+      <h1><%= category.name %></h1>
+  </div>
 <div class="expand_button dot_container">
   <div class="d-flex align-items-center justify-content-center">
     <strong><span>.</span><span>.</span><span>.</span></strong>
@@ -23,10 +24,9 @@
 </div>
 <div class="cards_expanded">
   <div class="d-flex">
-    <a href="#" class="create_event_button">
+    <div class="create_event_button">
       <i class="fa fa-calendar-plus"></i>
-    </a>
-
+    </div>
     <% @activity_posts.where(category_id: category.id).each do |activity| %>
     <div class="card_standard">
       <div class="card_standard_container">
@@ -37,4 +37,6 @@
     <% end %>
   </div>
 </div>
+    <div class="cards_expanded_options">
+    </div>
 <% end %>

@@ -18,10 +18,10 @@ user_b = User.create!(email: "test2@email.com", password: "123456", first_name: 
 user_c = User.create!(email: "test3@email.com", password: "123456", first_name: "Johan", last_name: "H", username: "Johak11")
 
 # Generate the test categories
-category_1 = Category.create!(name: "Walking")
-category_2 = Category.create!(name: "Fika")
-category_3 = Category.create!(name: "Lunch")
-category_4 = Category.create!(name: "Padel")
+category_1 = Category.create!(name: "Walking", url: "https://confidentials.com/uploads/imager/7d647db7ceea1d5bfb38bb43a19d60d5/638511/ac9380f6d43bf737e78794120c474203.jpg")
+category_2 = Category.create!(name: "Fika", url: "https://confidentials.com/uploads/imager/7d647db7ceea1d5bfb38bb43a19d60d5/638511/ac9380f6d43bf737e78794120c474203.jpg")
+category_3 = Category.create!(name: "Lunch", url: "https://confidentials.com/uploads/imager/7d647db7ceea1d5bfb38bb43a19d60d5/638511/ac9380f6d43bf737e78794120c474203.jpg")
+category_4 = Category.create!(name: "Padel", url: "https://confidentials.com/uploads/imager/7d647db7ceea1d5bfb38bb43a19d60d5/638511/ac9380f6d43bf737e78794120c474203.jpg")
 
 # Generate a number of test activities for the 28th june
 activity_post_1 = ActivityPost.create!(description: "I plan to take a walk around the IKEA building", start_time: "2019-06-28 12:45", duration: 15, capacity: 2, title: "Walk and not talk", category_id: category_1.id , user_id: user_a.id)
