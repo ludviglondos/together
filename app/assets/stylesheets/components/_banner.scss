@@ -7,10 +7,33 @@
   box-shadow: 0;
   position: relative;
 }
-#front-page-image {
-    width: 100vw;
-    border-radius: 20px;
-    box-sizing: content-box;
-    width: 100%;
-    margin: 0px;
+
+.container-slider {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0;
+  margin-left: 0;
+  overflow: hidden;
+  img {
+  max-width:60%;
+  height:auto;
+  border-radius: 20px;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+  &:hover{
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+    }
   }
+}
+
+// Nahhh don't need this...
+// #front-page-image {
+//     width: 100vw;
+//     border-radius: 20px;
+//     box-sizing: content-box;
+//     width: 100%;
+//     margin: 0px;
+//   }
+
+
