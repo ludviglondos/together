@@ -1,15 +1,23 @@
-<div class="form_advance_activity_post">
-  <%= simple_form_for activity_post do |f| %>
-    <%= f.association :category, as: :select%>
-    <%= f.input :title %>
-    <%= f.input :start_time, as: :string, required: false, input_html: {class: "datepicker"}  %>
-    <%= f.input :duration, placeholder: 'Type in minutes the length of the activity' %>
-    <%= f.input :description, as: :text, placeholder: 'Add the information of the activity..' %>
-    <%= f.input :capacity %>
-    <% if params[:action] == 'edit' %>
-      <%= f.submit "Apply changes" %>
-    <% else %>
-      <%= f.submit "Add the activity"%>
-    <% end %>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 offset-sm-3">
+      <div class="form-style">
+        <%= simple_form_for activity_post do |f| %>
+        <%= f.association :category, as: :select%>
+        <%= f.input :title, placeholder: "Name of activity..."%>
+        <%= f.input :start_time, as: :string, required: false, input_html: {class: "datepicker"}  , placeholder: "2019.08.01..."%>
+        <%= f.input :duration, placeholder: 'Type in minutes the length of the activity' %>
+        <%= f.input :description, as: :text, placeholder: 'Add the information of the activity..' %>
+        <%= f.input :capacity %>
+        <% if params[:action] == 'edit' %>
+          <%= f.submit "Apply changes" %>
+        <% else %>
+          <%= f.button :submit, "Add the activity"%>
+        <% end %>
+        <% end %>
+       </div>
+   </div>
+  </div>
 </div>
+
+
