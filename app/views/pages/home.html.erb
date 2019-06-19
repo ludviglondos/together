@@ -4,3 +4,5 @@
 <%= link_to "Browse activities", activity_posts_path  %>
 <%= link_to "My bookings", my_activities_path  %>
 <%= link_to "create new activity", new_activity_post_path %>
+<%= link_to "See today's stuff", date_activities_path  %>
+<%= link_to "See tomorrow's stuff", date_activities_path(date: (Date.today + 1).strftime("%Y-%m-%e"))  %>

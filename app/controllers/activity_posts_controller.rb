@@ -5,8 +5,17 @@ class ActivityPostsController < ApplicationController
     @activity_posts = ActivityPost.all
   end
 
+  def activities_by_date
+    @categories = Category.all
+    if params[:date].present?
+      @date = Date.parse(params[:date])
+    else
+      @date = Date.today
+    end
+    @activity_posts = ActivityPost.on_date(@date)
+  end
+
   def show
-    @activity_posts = ActivityPost.all
     @has_joined = @activity_post.users.where(id: current_user.id).length.positive?
     if @has_joined
       @activity_user = @activity_post.activity_users.find_by(user: current_user)
