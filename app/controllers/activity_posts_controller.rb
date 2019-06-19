@@ -6,6 +6,7 @@ class ActivityPostsController < ApplicationController
   end
 
   def show
+    @activity_posts = ActivityPost.all
     @has_joined = @activity_post.users.where(id: current_user.id).length.positive?
     if @has_joined
       @activity_user = @activity_post.activity_users.find_by(user: current_user)
