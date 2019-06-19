@@ -9,3 +9,11 @@ $(document).ready(function() {
       $(".cards_expanded").slideToggle("swing");
     });
 });
+
+
+//Javascript for navBarToggle -- going from bars to cross
+$(document).ready(function() {
+    $(".burger_container").click(function(){
+      $(".burger_container").toggleClass('change');
+    });
+});
