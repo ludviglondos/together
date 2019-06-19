@@ -1,15 +1,94 @@
-.expand_button{
+/* Container for the dots... */
+.dot_container {
  width: 60px;
-  height: 28px;
-  text-align: center;
+ height: 28px;
+ text-align: center;
+ background: #D99F6C;
+ box-shadow: 0 0 15px rgba(0,0,0,0.2);
+ margin: 10px;
+ border-radius: 20px;
+ transform: scale(0.95);
+ transition: box-shadow 0.5s, transform 0.5s;
+ &:hover{
+  transform: scale(1);
+  box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+  }
+}
+
+.cards_expanded{
+  width: 70%;
+  height: 100%;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 10px;
   border-radius: 10px;
-  transform: scale(0.95);
-  transition: box-shadow 0.5s, transform 0.5s;
-  &:hover{
-    transform: scale(1);
-    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
-  }
+  padding: 20px;
 }
+/* Container for the dots...END */
+
+
+@keyframes blink {
+    /**
+     * At the start of the animation the dot
+     * has an opacity of .2
+     */
+     0% {
+      opacity: .2;
+    }
+    /**
+     * At 20% the dot is fully visible and
+     * then fades out slowly
+     */
+     20% {
+      opacity: 1;
+    }
+    /**
+     * Until it reaches an opacity of .2 and
+     * the animation can start again
+     */
+     100% {
+      opacity: .2;
+    }
+  }
+
+  .expand_button span {
+    /**
+     * Use the blink animation, which is defined above
+     */
+     animation-name: blink;
+    /**
+     * The animation should take 1.4 seconds
+     */
+     animation-duration: 1.4s;
+    /**
+     * It will repeat itself forever
+     */
+     animation-iteration-count: infinite;
+    /**
+     * This makes sure that the starting style (opacity: .2)
+     * of the animation is applied before the animation starts.
+     * Otherwise we would see a short flash or would have
+     * to set the default styling of the dots to the same
+     * as the animation. Same applies for the ending styles.
+     */
+     animation-fill-mode: both;
+   }
+
+   .expand_button span:nth-child(2) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .2s, otherwise all dots
+     * would animate at the same time
+     */
+     animation-delay: .2s;
+   }
+
+   .expand_button span:nth-child(3) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .4s, otherwise all dots
+     * would animate at the same time
+     */
+     animation-delay: .4s;
+   }
+
