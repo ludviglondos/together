@@ -12,6 +12,15 @@ class ActivityPostsController < ApplicationController
     else
       @date = Date.today
     end
+
+    if @date == Date.today
+      @date_show = "Today"
+    elsif @date == Date.today + 1
+      @date_show = "Tomorrow"
+    else
+      @date_show = @date.strftime("%A, %b %d")
+    end
+
     @activity_posts = ActivityPost.on_date(@date)
   end
 

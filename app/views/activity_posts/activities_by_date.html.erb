@@ -1,23 +1,39 @@
-<div class="d-flex">
-<div>
-<h3>Today</h3>
-<%= @date.strftime("%Y-%m-%e") %>
-</div>
-<%= link_to "See tomorrow's stuff", date_activities_path(date: (@date + 1).strftime("%Y-%m-%e"))  %>
-<h1>Datepicker</h1>
+<div class="d-flex align-items-center">
+  <%= link_to date_activities_path(date: (@date - 1).strftime("%Y-%m-%e")) do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+  <div>
+    <%= @date_show %>
+  </div>
+  <%= link_to date_activities_path(date: (@date + 1).strftime("%Y-%m-%e")) do %>
+    <i class="fas fa-arrow-right"></i>
+  <% end %>
+  <i class="far fa-calendar-alt"></i>
 </div>
 
 <% @categories.each do |category| %>
-  <div style="height: 100px; width: 200px; border: 1px solid black;">
-    <h1><%= category.name %></h1>
-    </div>
-    <%= category.id %>
+<div style="height: 100px; width: 200px; border: 1px solid black;">
+  <h1><%= category.name %></h1>
+</div>
+<div class="expand_button dot_container">
+  <div class="d-flex align-items-center justify-content-center">
+    <strong><span>.</span><span>.</span><span>.</span></strong>
+  </div>
+</div>
+<div class="cards_expanded">
+  <div class="d-flex">
+    <a href="#" class="create_event_button">
+      <i class="fa fa-calendar-plus"></i>
+    </a>
+
     <% @activity_posts.where(category_id: category.id).each do |activity| %>
-      <div class="card_standard">
-        <div class="card_standard_container">
-          <h2><%=activity.category.name%></h2>
-          <h2><%=activity.start_time %></h2>
-        </div>
+    <div class="card_standard">
+      <div class="card_standard_container">
+        <h2><%=activity.category.name%></h2>
+        <h2><%=activity.start_time %></h2>
       </div>
-      <% end %>
-  <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<% end %>
