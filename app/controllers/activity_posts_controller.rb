@@ -24,14 +24,12 @@ class ActivityPostsController < ApplicationController
     @activity_posts = ActivityPost.on_date(@date)
   end
 
+  def show_my_upcoming
+    set_vars_for_profile
+  end
 
-
-  def show_my
-    @categories = Category.all
-    @activity_users = ActivityUser.all
-    @my_activity_post_joined = current_user.activity_users
-    @my_activity_posts_hosting = current_user.activity_posts.order(start_time: :asc)
-
+  def my_hosting
+    set_vars_for_profile
   end
 
   def new
@@ -91,5 +89,12 @@ class ActivityPostsController < ApplicationController
 
   def activity_post_params
     params.require(:activity_post).permit(:description, :start_time, :duration, :capacity, :title, :category_id)
+  end
+
+  def set_vars_for_profile
+    @categories = Category.all
+    @activity_users = ActivityUser.all
+    @my_activity_post_joined = current_user.activity_users
+    @my_activity_posts_hosting = current_user.activity_posts.order(start_time: :asc)
   end
 end
