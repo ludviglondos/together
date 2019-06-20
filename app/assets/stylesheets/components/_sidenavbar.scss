@@ -1,36 +1,17 @@
-
-.myprofile_container {
- width: 100%;
- height: 100%;
- text-align: center;
- background: #FFF;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
- margin-left: 30px;
- border-radius: 10px;
- padding: 3px;
- transform: scale(0.95);
- transition: box-shadow 0.5s ease, transform 0.5s ease;
- &:hover{
-  transform: scale(1);
-  box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
-}
-}
-
 .mylink_container {
  width: 200px;
  height: 45px;
  text-align: center;
- background: #FFF;
+ background: #FFF9EE;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
- margin: 10px;
  border-radius: 10px;
- padding: 2px;
+ padding: 8px;
  transform: scale(0.95);
  transition: box-shadow 0.5s ease, transform 0.5s ease;
  &:hover{
   transform: scale(1);
   box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
-}
+  }
 }
 
 .sidenav {
@@ -38,25 +19,25 @@
   width: 0;
   position: fixed;
   z-index: 1;
-  top: 60px;
   left: 0;
-  background-color: #FFF;
+  background-color: #FFF9EE;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  border-radius: 10px;
 }
 
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #000;
+  color: #8298B3;
   display: block;
   transition: 0.3s
 }
 
 .sidenav a:hover, .offcanvas a:focus{
-  color: #f1f1f1;
+  color: #000;
 }
 
 .closebtn {
@@ -66,3 +47,22 @@
   font-size: 36px !important;
   margin-left: 50px;
 }
+
+// .myprofile_container {
+//  width: 100%;
+//  height: 100%;
+//  text-align: center;
+//  background: #FFF;
+//  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//  // margin-left: 60px;
+//  border-radius: 10px;
+//  padding: 0px;
+//  font-size:50px;
+//  cursor:pointer;
+//  transform: scale(0.95);
+//  transition: box-shadow 0.5s ease, transform 0.5s ease;
+//  &:hover{
+//   transform: scale(1);
+//   box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+//   }
+// }

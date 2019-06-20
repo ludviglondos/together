@@ -1,0 +1,10 @@
+//Sidebar burger-button config.
+
+.fa-bars {
+font-size: 50px;
+margin-left: 15px;
+  &:hover {
+  color: #8298B3;
+  transition: 1s ease;
+  }
+}
