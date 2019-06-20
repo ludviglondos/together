@@ -3,19 +3,25 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <div class="d-flex align-items-center">
-    <%= link_to my_activities_path do %>
-    <div class="mylink_container">
-      <h4>
-        My Bookings
-      </h4>
-    </div>
+    <%= link_to date_activities_path do %>
+      <div class="mylink_container">
+        <h4>Browse all Activites</h4>
+      </div>
     <% end %>
   </div>
+     <%= link_to my_upcoming_activities_path do %>
+      <div class="mylink_container">
+        <h4>My Upcoming Activities</h4>
+      </div>
+    <% end %>
+    <%= link_to my_hosting_path do %>
+      <div class="mylink_container">
+        <h4>My Hosting</h4>
+      </div>
+    <% end %>
       <%= link_to root_path do %>
     <div class="mylink_container">
-      <h4>
-        Log Out
-      </h4>
+      <h4>Log Out</h4>
     </div>
     <% end %>
   </div>
