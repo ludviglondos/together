@@ -1,11 +1,24 @@
 
-<span class="myprofile_container" style="font-size:30px;cursor:pointer" onclick="openNav()">☰ My Profile</span>
+<span onclick="openNav()"><i class="fas fa-bars"></i></span>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a class="mylink_container" href="#">Link_Name_1</a>
-    <a class="mylink_container" href="#">Link_Name_2</a>
-    <a class="mylink_container" href="#">Link_Name_3</a>
-    <a class="mylink_container" href="#">Link_Name_4</a>
+  <div class="d-flex align-items-center">
+    <%= link_to my_activities_path do %>
+    <div class="mylink_container">
+      <h4>
+        My Bookings
+      </h4>
+    </div>
+    <% end %>
+  </div>
+      <%= link_to root_path do %>
+    <div class="mylink_container">
+      <h4>
+        Log Out
+      </h4>
+    </div>
+    <% end %>
+  </div>
 </div>
 
 <script>
