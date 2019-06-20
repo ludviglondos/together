@@ -1,15 +1,27 @@
-<div class="sidenav">
-    <div class="sidenav__close-icon">
-     <i class="fas fa-bars"></i>
-    </div>
-    <ul class="sidenav__list">
-      <li class="sidenav__list-item">
-      <%= link_to my_activities_path do %>
-      My Activities
-      <% end %>
-      </li>
-      <li class="sidenav__list-item">Search</li>
-      <li class="sidenav__list-item">Filter</li>
-      <li class="sidenav__list-item">Advanced</li>
-    </ul>
-  </div>
+
+<span class="myprofile_container" style="font-size:30px;cursor:pointer" onclick="openNav()">☰ My Profile</span>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a class="mylink_container" href="#">Link_Name_1</a>
+    <a class="mylink_container" href="#">Link_Name_2</a>
+    <a class="mylink_container" href="#">Link_Name_3</a>
+    <a class="mylink_container" href="#">Link_Name_4</a>
+</div>
+
+<script>
+  function openNav() {
+    var e = document.getElementById("mySidenav");
+    if (e.style.width == '250px')
+    {
+      e.style.width = '0px';
+    }
+    else
+    {
+      e.style.width = '250px';
+    }
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
