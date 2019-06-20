@@ -3,12 +3,27 @@
   <div>
     <h2>Upcoming Activities</h2>
     <div class="d-flex">
-      <% @my_activity_post_joined.each do |activity| %>
+      <% @my_activity_post_joined.each do |booking| %>
         <div class="card_standard">
           <div class="card_standard_container">
-            <h2><%=activity.activity_post.category.name%></h2>
-            <h2><%=activity.activity_post.start_time %></h2>
-            <%= link_to "Cancel", activity_user_path(activity), method: :delete  %>
+            <h2><%=booking.activity_post.category.name%></h2>
+            <div class="d-flex">
+              <i class="far fa-clock"></i>
+              <h2><%=booking.activity_post.start_time.strftime("%l:%M") %></h2>
+           </div>
+            <h2><%= booking.activity_post.duration%> min</h2>
+            <div class="d-flex">
+              <i class="fas fa-users"></i>
+              <h2><%= @activity_users.where(activity_post_id: booking.activity_post_id).count %>/ <%= booking.activity_post.capacity%></h2>
+            </div>
+            <div class="d-flex">
+              <i class="fas fa-map-marker-alt"></i>
+              <h2><%= booking.activity_post.location %></h2>
+            </div>
+            <h2><%= booking.activity_post.description %></h2>
+            <%=link_to cancel_activity_path(booking), method: :delete  do %>
+              <span class="join_event_button">Cancel</span>
+            <% end %>
           </div>
         </div>
       <% end %>
@@ -17,12 +32,29 @@
   <div>
     <h2>Activities Im hosting</h2>
     <div class="d-flex">
-      <%@my_activity_posts_hosting.each do |post| %>
+      <%@my_activity_posts_hosting.each do |activity| %>
         <div class="card_standard">
           <div class="card_standard_container">
-            <h2><%=post.title%></h2>
-            <%= link_to "Edit Activity", edit_activity_post_path(post.id) %>
-            <%= link_to "Cancel Activity", activity_post_path(post.id), method: :delete  %>
+            <h2><%=activity.category.name%></h2>
+        <div class="d-flex">
+          <i class="far fa-clock"></i>
+          <h2><%=activity.start_time.strftime("%l:%M") %></h2>
+        </div>
+        <h2><%= activity.duration%> min</h2>
+        <div class="d-flex">
+          <i class="fas fa-users"></i>
+          <h2><%= activity.activity_users.count %>/ <%= activity.capacity%></h2>
+        </div>
+        <div class="d-flex">
+          <i class="fas fa-map-marker-alt"></i>
+          <h2><%= activity.location %></h2>
+        </div>
+        <h2><%= activity.description %></h2>
+      </div>
+            <%= link_to "Edit Activity", edit_activity_post_path(activity.id) %>
+            <%=link_to activity_post_path(activity.id), method: :delete  do %>
+            <span class="join_event_button">Cancel Activity</span>
+            <% end %>
           </div>
         </div>
       <% end %>

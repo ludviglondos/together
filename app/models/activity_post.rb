@@ -17,4 +17,8 @@ class ActivityPost < ApplicationRecord
   def self.on_date(date)
     where(start_time: date.all_day)
   end
+
+  def has_user?(user)
+    users.where(id: user.id).present?
+  end
 end
