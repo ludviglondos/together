@@ -6,10 +6,10 @@ class ActivityUsersController < ApplicationController
     @activity_user = ActivityUser.new(user_id: current_user.id, activity_post_id: params[:activity_post_id])
 
     if @activity_user.save
-      redirect_to my_activities_path
+      redirect_to my_upcoming_activities_path
       #alert
     else
-      redirect_to activity_post_path(params[:activity_post_id])
+      redirect_to date_activities_path
       #alert
     end
   end
