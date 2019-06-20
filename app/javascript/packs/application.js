@@ -19,10 +19,22 @@ $(document).ready(function() {
     });
 });
 
-//Javascript for navBarToggle -- going from bars to cross
+//Javascript for navBarToggle -- going from bars to cross //
 $(document).ready(function() {
     $(".burger_container").click(function(){
       $(".burger_container").toggleClass('change');
     });
 });
 
+// Javascript for slider //
+$('.slide').on('click', function(){
+    $('#fade-in').toggleClass('show');
+});
+
+$('.spin').on('click', function(){
+    $('#spin-in').toggleClass('show2');
+});
+
+$('h1.spacing').on('mouseenter', function(){
+  $(this).toggleClass('spaced');
+});
