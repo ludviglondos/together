@@ -14,11 +14,6 @@ class ActivityUsersController < ApplicationController
     end
   end
 
-  def destroy
-    @activity_user.destroy
-    redirect_to my_activities_path
-  end
-
   private
 
   def set_activity_user

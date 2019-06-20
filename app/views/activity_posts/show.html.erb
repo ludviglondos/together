@@ -1,9 +1,0 @@
-<h1>This is the page for showing a specific activity post</h1>
-<h2><%= @activity_post.title %></h2>
-
-<% if @has_joined %>
-<%= link_to "Cancel", activity_user_path(@activity_user), method: :delete  %>
-<%else%>
-<%= link_to "Join this activity", activity_post_activity_users_path(@activity_post.id), method: :post  %>
-<% end %>
-

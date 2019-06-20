@@ -1,5 +1,5 @@
 class ActivityPostsController < ApplicationController
-  before_action :set_activity_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_activity_post, only: [:edit, :update, :destroy, :cancel_activity]
 
   def index
     @activity_posts = ActivityPost.all
@@ -24,20 +24,19 @@ class ActivityPostsController < ApplicationController
     @activity_posts = ActivityPost.on_date(@date)
   end
 
-  def show
-    @has_joined = @activity_post.users.where(id: current_user.id).length.positive?
-    if @has_joined
-      @activity_user = @activity_post.activity_users.find_by(user: current_user)
-    end
-  end
+
 
   def show_my
+    @categories = Category.all
+    @activity_users = ActivityUser.all
     @my_activity_post_joined = current_user.activity_users
     @my_activity_posts_hosting = current_user.activity_posts.order(start_time: :asc)
 
   end
 
   def new
+    @activity_post = ActivityPost.new
+
     if true #Need to change to the correct logic when it is displayed on index page
       @activity_post_default = ActivityPost.new(description: "Lets take a Walk!", duration: 15, capacity: 10, title: "Walking")
       @activity_post_default.category_id = Category.find_by_name("Walking").id
@@ -51,7 +50,6 @@ class ActivityPostsController < ApplicationController
       @activity_post_default = ActivityPost.new(description: "I want to play Padel come join me!", duration: 15, capacity: 4, title: "Padel")
       @activity_post_default.category_id = Category.find_by_name("Padel").id
     end
-  @activity_post = ActivityPost.new
   end
 
   def create
@@ -78,6 +76,11 @@ class ActivityPostsController < ApplicationController
     @activity_post.destroy
     #add alert
     redirect_to my_activities_path
+  end
+
+  def cancel_activity
+    @activity_post.activity_users.find_by(user_id: current_user.id).destroy
+    redirect_to date_activities_path
   end
 
   private
