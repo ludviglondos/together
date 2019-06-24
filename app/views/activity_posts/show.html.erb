@@ -15,25 +15,26 @@
         </div>
 
       </div>
-      <div class="col-7 d-flex flex-column justify-content-between">
+      <div class="col-7 d-flex flex-column justify-content-between text-center">
         <h2><%= @activity_post.title %></h2>
-        <div class="text-center">
+        <div>
         <h1></i><%=@activity_post.start_time.strftime("%l:%M") %></h1>
         </div>
         <h2><i class="fas fa-map-marker-alt"></i><%= @activity_post.location %></h2>
       </div>
-      <div class="col-2 card_standard_activity_join">
         <% if @activity_post.has_user?(current_user) %>
-        <%=link_to cancel_activity_path(@activity_post.id), method: :delete  do %>
-        <span class="join_event_button">Cancel</span>
-        <% end %>
-        <%else%>
-        <%= link_to activity_post_activity_users_path(@activity_post.id), method: :post  do %>
-        <span class="join_event_button">Join</span>
-        <% end %>
-        <% end %>
-      </div>
+          <div class="col-2 cancel_event">
+            <%=link_to cancel_activity_path(@activity_post.id), method: :delete  do %>
+            <h4 class="cancel_event">C<br>A<br>N<br>C<br>E<br>L</h4>
+          </div>
+          <% end %>
+          <%else%>
+          <div class="col-2 join_event">
+            <%= link_to activity_post_activity_users_path(@activity_post.id), method: :post  do %>
+          <h4 class="join_event specialeffects">J<br>O<br>I<br>N</h4>
+            </div>
+          <% end %>
+          <% end %>
     </div>
   </div>
-
 </div>
