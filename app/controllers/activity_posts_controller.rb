@@ -2,7 +2,7 @@ class ActivityPostsController < ApplicationController
   before_action :set_activity_post, only: [:show, :edit, :update, :destroy, :cancel_activity]
 
   def index
-    @activity_posts = ActivityPost.all
+    activities_by_date
   end
 
   def show
