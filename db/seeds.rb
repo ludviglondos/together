@@ -18,9 +18,9 @@ user_b = User.create!(email: "test2@email.com", password: "123456", first_name: 
 user_c = User.create!(email: "test3@email.com", password: "123456", first_name: "Johan", last_name: "H", username: "Johak11")
 
 # Generate the test categories
-category_1 = Category.create!(name: "Walking", url: "https://confidentials.com/uploads/imager/7d647db7ceea1d5bfb38bb43a19d60d5/638511/ac9380f6d43bf737e78794120c474203.jpg")
-category_2 = Category.create!(name: "Fika", url: "https://confidentials.com/uploads/imager/7d647db7ceea1d5bfb38bb43a19d60d5/638511/ac9380f6d43bf737e78794120c474203.jpg")
-category_3 = Category.create!(name: "Lunch", url: "https://confidentials.com/uploads/imager/7d647db7ceea1d5bfb38bb43a19d60d5/638511/ac9380f6d43bf737e78794120c474203.jpg")
+category_1 = Category.create!(name: "Walking", url: "walking_card.jpg")
+category_2 = Category.create!(name: "Fika", url: "fika_card.jpg")
+category_3 = Category.create!(name: "Lunch", url: "lunch_card.jpg")
 category_4 = Category.create!(name: "Padel", url: "https://confidentials.com/uploads/imager/7d647db7ceea1d5bfb38bb43a19d60d5/638511/ac9380f6d43bf737e78794120c474203.jpg")
 
 # Generate a number of test activities for the 28th june

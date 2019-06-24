@@ -12,7 +12,7 @@
   <i class="far fa-calendar-alt"></i>
 </div>
 
-<div class="kork-container">
+<div class="kork-container" style="background-image: url(<%= image_path('pinboard.jpg') %>)">
   <div class="row kork-row">
     <div class=" col-9 d-flex">
 
@@ -22,7 +22,7 @@
       <div class="col-6">
 
       <div>
-        <div class="banner-container" style="background-image: url(<%= category.url %>)">
+        <div class="banner-container" style="background-image: url(<%= image_path(category.url) %>)">
           <h1><%= category.name %></h1>
         </div>
         <div class="expand_button dot_container">
