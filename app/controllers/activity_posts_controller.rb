@@ -1,10 +1,13 @@
 class ActivityPostsController < ApplicationController
-  before_action :set_activity_post, only: [:edit, :update, :destroy, :cancel_activity]
+  before_action :set_activity_post, only: [:show, :edit, :update, :destroy, :cancel_activity]
 
   def index
     @activity_posts = ActivityPost.all
   end
 
+  def show
+
+  end
   def activities_by_date
     @categories = Category.all
     if params[:date].present?
