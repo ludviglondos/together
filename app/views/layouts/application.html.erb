@@ -12,10 +12,8 @@
   <body>
     <%= render 'shared/flashes' %>
     <%= render 'shared/sidenavbar' %>
-    <div class="container">
     <%= render 'shared/header' %>
     <%= yield %>
-    </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
