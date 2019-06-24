@@ -11,7 +11,34 @@
 }
 
 .kork-next-up{
-  border: 5px solid black;
-  height: 70%;
-  width: 90%;
+  width: 320px;
+  height: 90%;
+  background: #FFF9EE;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+    h2{
+    font-size: 35px !important;
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
+    text-align: center;
+  }
+}
+
+.card_side {
+  width: 310px;
+  height: 100px;
+  position: fixed;
+  background: #FFF9EE;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin: 5px;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+  // &:hover{
+  //   transform: scale(1);
+  //   box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+  // }
 }
