@@ -1,7 +1,7 @@
 /* Standard card to be used for e.g. viewing "My bookings" */
 
 .card_standard_container {
-  width: 100%
+  width: 100%;
 }
 
 .card_standard {
@@ -39,7 +39,6 @@
   margin: 0;
 }
 
-
 .card_standard .card_standard-infos {
   padding: 16px;
   display: flex;
@@ -55,12 +54,38 @@
   width: 40px;
 }
 
-
 .card_container_activity {
 
 }
+
 .card_standard_activity_join {
 border: 1px solid black;
 width:100%;
 height:100%;
+}
+
+.card_container_side {
+  width: 250px;
+  height: auto;
+  background: #FFF9EE;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.card_side {
+  width: 240px;
+  height: 100px;
+  background: #FFF9EE;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin: 5px;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+  &:hover{
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+  }
 }
