@@ -29,22 +29,20 @@
 
 .banner-container {
   background-size: cover;
+  position: relative;
   padding-right: 0px;
   padding-left: 0px;
-  margin-right: 0;
-  margin-left: 212px;
-  overflow: hidden;
   height: 300px;
-  max-width:470px;
+  width:470px;
   height:230px;
   border-radius: 20px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   transform: scale(0.95);
   transition: box-shadow 0.5s, transform 0.5s;
-    &:hover{
-    transform: scale(1);
-    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
-    }
+    // &:hover{
+    // transform: scale(1);
+    // box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+    // }
     h1 {
     font-size: 45px !important;
     letter-spacing: 3px !important;
