@@ -1,15 +1,18 @@
 
-<div class="d-flex align-items-center">
+<div class="date-switcher-container d-flex align-items-center justify-content-center">
+  <% if @date != Date.today %>
   <%= link_to date_activities_path(date: (@date - 1).strftime("%Y-%m-%e")) do %>
-  <i class="fas fa-arrow-left"></i>
+  <h2><i class="fas fa-arrow-left"></i></h2>
+  <% end  %>
   <% end %>
   <div>
-    <%= @date_show %>
+    <h2><%= @date_show %></h2>
+
   </div>
   <%= link_to date_activities_path(date: (@date + 1).strftime("%Y-%m-%e")) do %>
-  <i class="fas fa-arrow-right"></i>
+  <h2><i class="fas fa-arrow-right"></i></h2>
+
   <% end %>
-  <i class="far fa-calendar-alt"></i>
 </div>
 
 <div class="kork-container">
