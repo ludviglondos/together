@@ -84,7 +84,30 @@
     <div class="col-3">
       <div class="kork-next-up">
         <h2>Next up!</h2>
-        <a href="#" class="card_side">Hejsan</a>
+        <%  @activity_posts.order(start_time: :asc).first(5).each do |activity|%>
+          <div class="row kork_card_side ">
+            <div class="col-10 d-flex justify-content-center align-items-center">
+              <div>
+                <h4><%= activity.category.name %></h4>
+                <div class="d-flex justify-content-space-between">
+                  <h4><i class="far fa-clock"></i></h4>
+                  <h4><%=activity.start_time.strftime("%l:%M") %></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <% if activity.has_user?(current_user) %>
+              <%=link_to cancel_activity_path(activity.id), method: :delete  do %>
+              <span class="join_event_button">Cancel</span>
+              <% end %>
+              <%else%>
+              <%= link_to activity_post_activity_users_path(activity.id), method: :post  do %>
+              <span class="join_event_button">Join</span>
+              <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
