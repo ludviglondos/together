@@ -29,7 +29,7 @@
   </div>
   <div class="row kork-row">
     <div class=" col-9 d-flex row justify-content-space-between">
-      
+
       <% @categories.each do |category| %>
       <div class="col-6 d-flex justify-content-center">
         <div>
@@ -88,8 +88,8 @@
       <% end %>
     </div>
     <div class="col-3">
+      <h2>Next up!</h2>
       <div class="kork-next-up">
-        <h2>Next up!</h2>
         <%  @activity_posts.order(start_time: :asc).first(5).each do |activity|%>
         <div class="row kork_card_side ">
           <div class="col-10 d-flex justify-content-center align-items-center">
@@ -104,13 +104,13 @@
           <% if activity.has_user?(current_user) %>
           <div class="col-2 cancel_event">
             <%=link_to cancel_activity_path(activity.id), method: :delete  do %>
-            <h4 class="cancel_event">C<br>A<br>N<br>C<br>E<br>L</h4>
+            <i class="far fa-minus-square"></i>
           </div>
           <% end %>
           <%else%>
           <div class="col-2 join_event">
             <%= link_to activity_post_activity_users_path(activity.id), method: :post  do %>
-          <h4 class="join_event specialeffects">J<br>O<br>I<br>N</h4>
+          <i class="far fa-plus-square"></i>
             </div>
           <% end %>
           <% end %>

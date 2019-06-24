@@ -5,35 +5,35 @@ a:link {
 
 .join_event {
   padding-top: 10px;
-  height: auto;
-  background: #78AB05;
-  border-radius: 0px 10px 10px 0px;
-  h4 {
-    text-decoration: none !important;
-    font-size: 16px;
-    letter-spacing: 3px !important;
-    color: #FFF;
-    text-align: center;
-    &:hover{
-      color: black;
-    }
-  }
+  height: 70px;
+  background: #56CF46;
+  // border-radius: 0px 5px 5px 0px;
+  // h4 {
+  //   text-decoration: none !important;
+  //   font-size: 16px;
+  //   letter-spacing: 3px !important;
+  //   color: #FFF;
+  //   text-align: center;
+  //   &:hover{
+  //     color: black;
+  //   }
+  // }
 }
 
 .cancel_event {
   padding-top: 6px;
-  height: auto;
-  background: red;
-  border-radius: 0px 10px 10px 0px;
-    h4 {
-    font-size: 13px;
-    letter-spacing: 3px !important;
-    color: #FFF;
-    text-align: center;
-    &:hover{
-      color: black;
-    }
-  }
+  height: 70px;
+  background: #F83A08;
+  // border-radius: 0px 5px 5px 0px;
+    // h4 {
+    // font-size: 13px;
+    // letter-spacing: 3px !important;
+    // color: #FFF;
+    // text-align: center;
+    // &:hover{
+    //   color: black;
+    // }
+  // }
 }
 
 // .join_button {

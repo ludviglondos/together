@@ -11,14 +11,13 @@
 }
 
 .kork-next-up{
-  width: 320px;
-
-  background: #FFF9EE;
-  border-radius: 10px;
+  width: 260px;
+  background: #FFF;
+  border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 30px;
   padding-top: 5px;
-  padding-bottom: 18px;
+  padding-bottom: 5px;
     h2{
     font-size: 35px !important;
     margin-block-start: 0em !important;
@@ -28,11 +27,11 @@
 }
 
 .kork_card_side {
-  width: 310px;
-  height: 120px;
+  width: 250px;
+  height: 70px;
   background: #FFF;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 10px;
+  // border-radius: 5px;
   margin: 5px;
   transform: scale(0.95);
   transition: box-shadow 0.5s, transform 0.5s;
@@ -42,7 +41,19 @@
   }
 }
 
+.far.fa-plus-square {
+  padding-top: 18px;
+  color: white;
+  height: 30px;
+  width: 30px;
+}
 
+.far.fa-minus-square {
+  padding-top: 18px;
+  color: white;
+  height: 30px;
+  width: 30px;
+}
 
 .card_side {
   width: 300px;
