@@ -27,25 +27,43 @@
   }
 }
 
-// Nahhh don't need this...
-// #front-page-image {
-//     width: 100vw;
-//     border-radius: 20px;
-//     box-sizing: content-box;
-//     width: 100%;
-//     margin: 0px;
-//   }
-
 .banner-container {
   padding-right: 0px;
   padding-left: 0px;
   margin-right: 0;
-  margin-left: 0;
+  margin-left: 212px;
   overflow: hidden;
   height: 300px;
-  max-width:100%;
-  height:auto;
+  max-width:470px;
+  height:230px;
   border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   transform: scale(0.95);
   transition: box-shadow 0.5s, transform 0.5s;
+    &:hover{
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+    }
+    h1 {
+    font-size: 45px !important;
+    letter-spacing: 3px !important;
+    color: #FFF !important;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: center;
+        text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
+  }
+//   .text_container {
+//   width: auto;
+//   height: auto;
+//   background: black;
+// }
 }
