@@ -1,0 +1,15 @@
+<div class="date-switcher-div">
+  <% if @date != Date.today %>
+    <%= link_to date_activities_path(date: (@date - 1).strftime("%Y-%m-%e")) do %>
+    <h2><i class="far fa-arrow-alt-circle-left"></i></h2>
+    <% end  %>
+  <% end %>
+  <div class="date-switcher-date-box">
+    <h2><%= @date_show %></h2>
+  </div>
+  <div>
+    <%= link_to date_activities_path(date: (@date + 1).strftime("%Y-%m-%e")) do %>
+      <h2><i class="far fa-arrow-alt-circle-right"></i></h2>
+    <% end %>
+  </div>
+</div>
