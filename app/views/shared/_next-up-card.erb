@@ -1,24 +1,29 @@
 
 <%  @activity_posts_next_up.order(start_time: :asc).first(5).each do |activity|%>
   <div class="small-card-product">
-
-    <img src="https://images.unsplash.com/photo-1484712401471-05c7215830eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
-
+    <%= image_tag activity.category.url, alt: "alttext" %>
     <div class="small-card-content">
-      <div class="small-card-product-infos">
-        <h2>Walking 12:30</h2>
+      <div class="small-card-product-infos d-flex justify-content-space-between">
+        <h2><%= activity.category.name %></h2>
+        <h2><%=activity.start_time.strftime("%l:%M")%></h2>
       </div>
-      <div class="location">
-        <p>Trappan Hubhult</p>
+      <div class="location d-flex justify-content-center">
+        <p><%= activity.location %></p>
       </div>
     </div>
-
     <div class="small-container-btn">
       <div class="small-join-btn">
-        <i class="fas fa-plus"></i>
+      <% if activity.has_user?(current_user) %>
+        <%=link_to cancel_activity_path(activity.id), method: :delete  do %>
+          <i class="fas fa-check"></i>
+        <% end %>
+        <%else%>
+         <%= link_to activity_post_activity_users_path(activity.id), method: :post  do %>
+          <i class="fas fa-plus"></i>
+          <% end %>
+          <% end %>
       </div>
     </div>
-
   </div>
-
 <% end %>
+
