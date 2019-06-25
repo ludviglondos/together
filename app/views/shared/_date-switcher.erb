@@ -1,7 +1,7 @@
 <div class="date-switcher-div">
   <% if @date != Date.today %>
     <%= link_to date_activities_path(date: (@date - 1).strftime("%Y-%m-%e")) do %>
-    <h2><i class="far fa-arrow-alt-circle-left"></i></h2>
+    <h1><i class="far fa-arrow-alt-circle-left"></i></h1>
     <% end  %>
   <% end %>
   <div class="date-switcher-date-box">
@@ -9,7 +9,7 @@
   </div>
   <div>
     <%= link_to date_activities_path(date: (@date + 1).strftime("%Y-%m-%e")) do %>
-      <h2><i class="far fa-arrow-alt-circle-right"></i></h2>
+      <h1><i class="far fa-arrow-alt-circle-right"></i></h1>
     <% end %>
   </div>
 </div>
