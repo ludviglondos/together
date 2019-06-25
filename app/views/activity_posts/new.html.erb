@@ -1,13 +1,1 @@
-<div>
-  <h2>Quick create</h2>
-  <%= render 'shared/form_quick_create', activity_post: @activity_post_default %>
-
-
-</div>
-<div>
-  <h2 class="text-center">More options</h2>
-  <%= render 'shared/form_advance_activity_post', activity_post: @activity_post %>
-</div>
-
-<%= link_to "Landing-page", root_path  %>
-<%= link_to "Browse activities", activity_posts_path  %>
+<%= render 'shared/form_advance_activity_post', activity_post: @activity_post %>
