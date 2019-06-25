@@ -38,9 +38,10 @@ color: #FFFFFF;
 width: 140px;
 height: 41px;
 background: #EFEFEF;
-padding: 5px;
+padding-top: 10px;
 margin: 10px 0px;
 border: 1px dashed #4E4E4E;
+text-align: center;
 border-radius: 2px;
   h4 {
     font-family: Roboto;
@@ -48,7 +49,6 @@ border-radius: 2px;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
-    text-align: center;
     color: #009975;
   }
 }
