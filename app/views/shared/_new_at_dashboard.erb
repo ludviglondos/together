@@ -1,6 +1,31 @@
 <div class="dashboard-new">
   <h4>New Category</h4>
 </div>
-<div class="dashboard-new">
-  <h4>New Event</h4>
+<div class="dashboard-new" data-toggle="modal" data-target="#quickCreateModal">
+    <h4>New Event</h4>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="quickCreateModal" tabindex="-1" role="dialog" aria-labelledby="quick-create-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="text-center">
+          <h5 class="modal-title" id="quick-create-modal">Host a new event</h5>
+        </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="dashboard-new-text-box">
+        <p>Quick create a new event!</p>
+        <p> Choose a <strong>Category</strong> and a <strong>Date</strong>!</p>
+        <p>Customize it later at My Hostings. </p>
+      </div>
+      <div class="modal-body">
+        <%= render 'shared/quick-create-modal', activity_post: ActivityPost.new %>
+      </div>
+    </div>
+  </div>
 </div>

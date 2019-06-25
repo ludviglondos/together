@@ -3,11 +3,14 @@ class ActivityPostsController < ApplicationController
 
   def index
     activities_by_date
+    if params[:category_id].present?
+      @activity_posts = @activity_posts.where(category_id: params[:category_id])
+    end
   end
 
   def show
-
   end
+
   def activities_by_date
     @categories = Category.all
     if params[:date].present?
@@ -24,7 +27,13 @@ class ActivityPostsController < ApplicationController
       @date_show = @date.strftime("%A, %b %d")
     end
 
+    @activity_posts_next_up = ActivityPost.on_date(@date)
+
     @activity_posts = ActivityPost.on_date(@date)
+
+    if params[:category_id].present?
+      @activity_posts = @activity_posts.where(category_id: params[:category_id])
+    end
   end
 
   def show_my_upcoming
