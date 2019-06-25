@@ -1,24 +1,28 @@
 
   <% @activity_posts.each do |activity| %>
       <div class="card-product">
-
-        <img src="https://images.unsplash.com/photo-1476459216969-94c7100f88a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
-
+        <%= image_tag activity.category.url, alt: "activity-category" %>
         <div class="card-content">
           <div class="card-product-infos">
-            <h2>12:30 - 13:00</h2>
+            <div>
+              <h2><%=activity.start_time.strftime("%H:%M")%> - <%= (activity.start_time + (activity.duration*60)).strftime("%H:%M") %></h2>
+            </div>
             <i class="fas fa-map-marker-alt"></i>
-            <h5>Hubhult</h5>
+            <h5><%=activity.location%></h5>
           </div>
           <div class="location">
-            <p>Talking a walk along the beach  Malmö...</p>
+            <p><%= activity.description %></p>
           </div>
           <div class="capacity">
             <i class="fas fa-users"></i>
-            <img class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-            <img class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/krokrob" />
-            <img class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/pixelmybit" />
-            <div id="amount-capacity">+ 5 more</div>
+             <% activity.users.first(5).each do |user| %>
+            <%= image_tag user.url, alt: "avatar-bordered", class: "avatar-bordered" %>
+            <% end %>
+            <div id="amount-capacity">
+              <% if activity.users.count > 4 %>
+              + <%=(activity.users.count - 5)  %> more
+              <% end %>
+            </div>
           </div>
         </div>
         <div class="container-btn">
@@ -26,7 +30,15 @@
             <i class="fas fa-user-friends"></i>
           </div>
           <div class="join-btn">
-            <i class="fas fa-plus"></i>
+            <% if activity.has_user?(current_user) %>
+        <%=link_to cancel_activity_path(activity.id), method: :delete  do %>
+          <i class="fas fa-check"></i>
+        <% end %>
+        <%else%>
+         <%= link_to activity_post_activity_users_path(activity.id), method: :post  do %>
+          <i class="fas fa-plus"></i>
+          <% end %>
+          <% end %>
           </div>
         </div>
     </div>
