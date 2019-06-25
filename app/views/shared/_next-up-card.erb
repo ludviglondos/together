@@ -1,3 +1,28 @@
+
+<%  @activity_posts_next_up.order(start_time: :asc).first(5).each do |activity|%>
+  <div class="small-card-product">
+
+    <img src="https://images.unsplash.com/photo-1484712401471-05c7215830eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
+
+    <div class="small-card-content">
+      <div class="small-card-product-infos">
+        <h2>Walking 12:30</h2>
+      </div>
+      <div class="location">
+        <p>Trappan Hubhult</p>
+      </div>
+    </div>
+
+    <div class="small-container-btn">
+      <div class="small-join-btn">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div>
+
+  </div>
+
+<% end %>
+
 <% @activity_posts_next_up.order(start_time: :asc).first(5).each do |activity|%>
   <div class="row next_up_card ">
   <div class="col-2 d-flex justify-content-center align-items-center">
@@ -31,3 +56,4 @@
   <% end %>
   </div>
 <% end %>
+

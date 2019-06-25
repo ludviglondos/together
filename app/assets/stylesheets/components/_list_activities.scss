@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// body {
+//   background-color: rgb(236, 243, 244);
+//   height: 100vh;
+//   font-family: "Quicksand", sans-serif;
+// }
+
+
+ /******************************************
+CARDS
+******************************************/
+.container-btn {
+  background-color: #e3e8ea;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 100%;
+  width: 70px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#amount-capacity {
+  color: #817a7a;
+    margin: 0;
+    margin-left: 13px;
+    margin-top: 3px;
+}
+
+.join-btn {
+  border: none;
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.invite-btn {
+  background-color: #305f72;
+  height: 42%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas.fa-plus {
+    color: #fff;
+    font-size: 35px;
+}
+
+.fas.fa-map-marker-alt {
+    color: #000;
+    margin-left: 43px;
+    margin-right: 6px;
+    font-size: 16px;
+}
+.fas.fa-user-friends {
+    color: #fff;
+    font-size: 20px;
+}
+
+.fas.fa-users {
+  font-size: 20px;
+  margin: 0;
+  margin-right: 12px;
+}
+
+.capacity {
+  display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.avatar-bordered {
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  /*border: grey 1px solid;*/
+  margin: 0;
+  margin-right: -6px;
+}
+
+.card-product {
+  overflow: hidden;
+  justify-content: space-between;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+  object-position: 100% 100%;
+}
+
+.card-product h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    font-family: 'sans-serif';
+}
+
+h5 {
+    font-size: 1em;
+    margin: 1.67em 0;
+  font-family: 'sans-serif';
+  font-weight: bold;
+}
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-product-infos {
+  display: flex;
+    align-items: center;
+    height: 20px;
+    margin: 0;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.card-product .card-content {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+ font-size: 19px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.card-text {
+  font-size: 15px; color: #353535; text-transform: uppercase; font-weight: bold;
+}

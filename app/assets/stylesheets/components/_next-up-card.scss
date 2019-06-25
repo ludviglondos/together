@@ -66,3 +66,76 @@ color: #000000;
     // }
   // }
 }
+
+.small-container-btn {
+  background-color: #305e72;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 100%;
+  width: 70px;
+  display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.small-join-btn {
+  border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  z-index: 100;
+}
+
+
+.small-card-product {
+    overflow: hidden;
+    justify-content: space-between;
+    height: 80px;
+    background: white;
+    width: 95%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    margin: 0;
+     margin-bottom: 10px;
+    width: 87%;
+    margin-top: 20px;
+  .small-card-product-infos {
+    h2 {
+      font-size: 12px;
+      font-family: 'sans-serif';
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: -6px;
+    }
+
+  }
+}
+
+.location  p {
+      margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 12px;
+    }
+
+.small-card-product .card-content {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.small-card-product img {
+  height: 100%;
+  width: 80px;
+  object-fit: cover;
+  object-position: 50% 100%;
+}
