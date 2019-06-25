@@ -34,7 +34,7 @@ color: #FFFFFF;
   }
 }
 
-.dashboard-category-new {
+.dashboard-new {
 width: 140px;
 height: 41px;
 background: #EFEFEF;
@@ -65,5 +65,9 @@ height: 475px;
 background: rgba(0, 153, 117, 0.75);
 box-shadow: 0px 4px 10px rgba(172, 172, 172, 0.25);
 border-radius: 2px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: start;
 
 }
