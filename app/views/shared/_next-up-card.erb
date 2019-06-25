@@ -1,33 +1,33 @@
-        <%  @activity_posts_next_up.order(start_time: :asc).first(5).each do |activity|%>
-        <div class="row next_up_card ">
-          <div class="col-2 d-flex justify-content-center align-items-center">
-            <%= image_tag "logo.png", alt: "alttext", class: "icon-medium"%>
-          </div>
-          <div class="col-8 d-flex justify-content-center align-items-center">
-            <div>
-              <div class="d-flex justify-content-space-between">
-                <h4><%= activity.category.name %></h4>
-                <h4> - </h4>
-                <h4><%=activity.start_time.strftime("%l:%M") %></h4>
-              </div>
-              <div class="d-flex text-center">
-                <i class="fas fa-map-marker-alt"></i>
-                <h4><%= activity.location %></h4>
-              </div>
-            </div>
-          </div>
-          <% if activity.has_user?(current_user) %>
-          <div class="col-2 cancel_next_event">
-            <%=link_to cancel_activity_path(activity.id), method: :delete  do %>
-            <i class="far fa-minus-square"></i>
-          </div>
-          <% end %>
-          <%else%>
-          <div class="col-2 join_next_event">
-            <%= link_to activity_post_activity_users_path(activity.id), method: :post  do %>
-          <i class="far fa-plus-square"></i>
-            </div>
-          <% end %>
-          <% end %>
-        </div>
-        <% end %>
+<% @activity_posts_next_up.order(start_time: :asc).first(5).each do |activity|%>
+  <div class="row next_up_card ">
+  <div class="col-2 d-flex justify-content-center align-items-center">
+    <%= image_tag "logo.png", alt: "alttext", class: "icon-medium"%>
+  </div>
+  <div class="col-8 d-flex justify-content-center align-items-center">
+    <div>
+      <div class="d-flex justify-content-space-between">
+        <h4><%= activity.category.name %></h4>
+        <h4> - </h4>
+        <h4><%=activity.start_time.strftime("%l:%M") %></h4>
+      </div>
+      <div class="d-flex text-center">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4><%= activity.location %></h4>
+      </div>
+    </div>
+  </div>
+  <% if activity.has_user?(current_user) %>
+  <div class="col-2 cancel_next_event">
+    <%=link_to cancel_activity_path(activity.id), method: :delete  do %>
+    <i class="far fa-minus-square"></i>
+  </div>
+  <% end %>
+  <%else%>
+  <div class="col-2 join_next_event">
+    <%= link_to activity_post_activity_users_path(activity.id), method: :post  do %>
+  <i class="far fa-plus-square"></i>
+    </div>
+  <% end %>
+  <% end %>
+  </div>
+<% end %>
