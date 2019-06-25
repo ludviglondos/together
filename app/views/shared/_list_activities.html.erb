@@ -1,5 +1,33 @@
-<ul>
+
   <% @activity_posts.each do |activity| %>
-    <li><%= activity.title %></li>
+      <div class="card-product">
+
+        <img src="https://images.unsplash.com/photo-1476459216969-94c7100f88a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+
+        <div class="card-content">
+          <div class="card-product-infos">
+            <h2>12:30 - 13:00</h2>
+            <i class="fas fa-map-marker-alt"></i>
+            <h5>Hubhult</h5>
+          </div>
+          <div class="location">
+            <p>Talking a walk along the beach  Malmö...</p>
+          </div>
+          <div class="capacity">
+            <i class="fas fa-users"></i>
+            <img class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+            <img class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/krokrob" />
+            <img class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/pixelmybit" />
+            <div id="amount-capacity">+ 5 more</div>
+          </div>
+        </div>
+        <div class="container-btn">
+          <div class="invite-btn">
+            <i class="fas fa-user-friends"></i>
+          </div>
+          <div class="join-btn">
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+    </div>
   <% end %>
-</ul>
