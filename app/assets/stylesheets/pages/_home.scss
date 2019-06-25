@@ -14,10 +14,10 @@
 p {
   margin-top: 3rem;
   margin-bottom: 1rem;
-  width: 35%;
+  width: 40%;
   line-height: 2rem;
   // background-color: white;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 h1 {
@@ -27,4 +27,47 @@ h1 {
 }
 }
 
+
+.start_button {
+  // display: inline-block;
+    border-radius: 10px;
+    background-color: $green;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 30px;
+    /* padding: 5px; */
+    width: 12%;
+    /* transition: all 0.5s; */
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /* line-height: 3; */
+    height: 100px;
+    width: 400px;
+//   font-family: $join-btn;
+// span {
+//   cursor: pointer;
+//   display: inline-block;
+//   position: relative;
+//   transition: 0.5s;
+// }
+// span:after {
+//   content: '\00bb';
+//   position: absolute;
+//   opacity: 0;
+//   top: 0;
+//   right: -20px;
+//   transition: 0.5s;
+
+// }
+// &:hover span {
+//   padding-right: 25px;
+// }
+// &:hover span:after {
+//   opacity: 1;
+//   right: 0;
+// }
+
+}
 
