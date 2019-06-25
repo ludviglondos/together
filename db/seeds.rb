@@ -13,9 +13,9 @@ puts "Database cleaned"
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #Generate some users
-user_a = User.create!(email: "test@email.com", password: "123456", first_name: "Ludvig", last_name: "L", username: "Laddy")
-user_b = User.create!(email: "test2@email.com", password: "123456", first_name: "Karina", last_name: "H", username: "Pixelmybit")
-user_c = User.create!(email: "test3@email.com", password: "123456", first_name: "Johan", last_name: "H", username: "Johak11")
+user_a = User.create!(email: "test@email.com", password: "123456", first_name: "Ludvig", last_name: "L", username: "Laddy", url: "ludvig_londos.jpeg")
+user_b = User.create!(email: "test2@email.com", password: "123456", first_name: "Karina", last_name: "H", username: "Pixelmybit", url: "pixelmybit.jpeg")
+user_c = User.create!(email: "test3@email.com", password: "123456", first_name: "Johan", last_name: "H", username: "Johak11", url: "casual.jpg")
 
 # Generate the test categories
 category_1 = Category.create!(name: "Walking", url: "walking_card.jpg")
@@ -39,10 +39,22 @@ activity_post_10 = ActivityPost.create!(description: "I plan to take eat at Chop
 activity_post_11 = ActivityPost.create!(description: "I want to eat and have my idea for the new app challenged", start_time: "2019-06-28 11:50", duration: 45, capacity: 2, title: "Lunch and debate?", category_id: category_3.id , user_id: user_b.id)
 
 # Generate a number of bookings
-booking_1 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_6.id)
-booking_1 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_10.id)
-booking_1 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_11.id)
-booking_1 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_3.id)
+booking_1 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_1.id)
+booking_2 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_2.id)
+booking_3 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_3.id)
+booking_4 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_4.id)
+booking_5 = ActivityUser.create!(user_id: user_b.id, activity_post_id: activity_post_1.id)
+booking_6 = ActivityUser.create!(user_id: user_b.id, activity_post_id: activity_post_2.id)
+booking_7 = ActivityUser.create!(user_id: user_b.id, activity_post_id: activity_post_3.id)
+booking_8 = ActivityUser.create!(user_id: user_b.id, activity_post_id: activity_post_4.id)
+booking_9 = ActivityUser.create!(user_id: user_c.id, activity_post_id: activity_post_1.id)
+booking_10 = ActivityUser.create!(user_id: user_c.id, activity_post_id: activity_post_2.id)
+booking_11 = ActivityUser.create!(user_id: user_c.id, activity_post_id: activity_post_3.id)
+booking_12 = ActivityUser.create!(user_id: user_c.id, activity_post_id: activity_post_4.id)
+booking_13 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_1.id)
+booking_14 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_1.id)
+booking_15 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_1.id)
+booking_16 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_1.id)
 
 # Generate a number of test activities for the 29th june
 activity_post_22 = ActivityPost.create!(description: "I plan to take a walk around the IKEA building", start_time: "2019-06-29 12:45", duration: 15, capacity: 2, title: "Walk and not talk", category_id: category_1.id , user_id: user_a.id)
