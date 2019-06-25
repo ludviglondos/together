@@ -1,4 +1,4 @@
-        <%  @activity_posts.order(start_time: :asc).first(5).each do |activity|%>
+        <%  @activity_posts_next_up.order(start_time: :asc).first(5).each do |activity|%>
         <div class="row next_up_card ">
           <div class="col-2 d-flex justify-content-center align-items-center">
             <%= image_tag "logo.png", alt: "alttext", class: "icon-medium"%>

@@ -1,0 +1,14 @@
+<div class="quick-form-style">
+  <div class="form_advance_activity_post">
+    <%= simple_form_for activity_post do |f| %>
+      <%= f.association :category, as: :select%>
+      <%= f.input :start_time, as: :string, required: false, input_html: {class: "datepicker"}, placeholder: "Choose a date and time!"%>
+      <%= f.input :title, as: :hidden %>
+      <%= f.input :duration, as: :hidden %>
+      <%= f.input :description, as: :text, as: :hidden %>
+      <%= f.input :capacity, as: :hidden %>
+      <%= f.button :submit, "Quick Create"%>
+    <% end %>
+  </div>
+</div>
+

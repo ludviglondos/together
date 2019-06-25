@@ -1,5 +1,7 @@
  <% @categories.first(3).each do |category| %>
-        <div class="dashboard-category-container" style="background-image: url(<%= image_path(category.url) %>)">
-          <h4><%= category.name %></h4>
-          </div>
-        <% end %>
+  <%= link_to date_activities_path(date: @date ,category_id: category) do  %>
+  <div class="dashboard-category-container" style="background-image: url(<%= image_path(category.url) %>)">
+    <h4><%= category.name %></h4>
+    </div>
+  <% end %>
+<% end %>
