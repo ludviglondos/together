@@ -1,30 +1,35 @@
-<h2>Hosting</h2>
-<div class="d-flex">
-  <%@my_activity_posts_hosting.each do |activity| %>
-    <div class="card_standard">
-      <div class="card_standard_container">
-        <h2><%=activity.category.name%></h2>
-        <div class="d-flex">
-          <i class="far fa-clock"></i>
-          <h2><%=activity.start_time.strftime("%l:%M") %></h2>
+  <div class="text-center">
+  <h2>My Hostings</h2>
+  </div>
+<div class="container dashboard-container">
+  <div class="d-flex">
+    <%@my_activity_posts_hosting.each do |activity| %>
+      <div class="card_standard">
+        <div class="card_standard_container">
+          <h2><%=activity.category.name%></h2>
+          <div class="d-flex">
+            <i class="far fa-clock"></i>
+            <h2><%=activity.start_time.strftime("%l:%M") %></h2>
+          </div>
+          <h2><%= activity.duration%> min</h2>
+          <div class="d-flex">
+            <i class="fas fa-users"></i>
+            <h2><%= activity.activity_users.count %>/ <%= activity.capacity%></h2>
+          </div>
+          <div class="d-flex">
+            <i class="fas fa-map-marker-alt"></i>
+            <h2><%= activity.location %></h2>
+          </div>
+          <h2><%= activity.description %></h2>
+          <%= link_to "Edit Activity", edit_activity_post_path(activity.id) %>
+          <%=link_to activity_post_path(activity.id), method: :delete  do %>
+              <span class="join_event_button">Cancel Activity</span>
+          <% end %>
         </div>
-        <h2><%= activity.duration%> min</h2>
-        <div class="d-flex">
-          <i class="fas fa-users"></i>
-          <h2><%= activity.activity_users.count %>/ <%= activity.capacity%></h2>
-        </div>
-        <div class="d-flex">
-          <i class="fas fa-map-marker-alt"></i>
-          <h2><%= activity.location %></h2>
-        </div>
-        <h2><%= activity.description %></h2>
-        <%= link_to "Edit Activity", edit_activity_post_path(activity.id) %>
-        <%=link_to activity_post_path(activity.id), method: :delete  do %>
-            <span class="join_event_button">Cancel Activity</span>
-        <% end %>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+
 </div>
 
 
