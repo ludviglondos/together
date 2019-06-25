@@ -2,11 +2,11 @@
  width: 200px;
  height: auto;
  text-align: center;
- background: #FFF9EE;
+ background: #fbfbfb;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
  border-radius: 10px;
  padding: 8px;
- transform: scale(0.95);
+ transform: scale(0.98);
  transition: box-shadow 0.5s ease, transform 0.5s ease;
   h4{
     font-size: 15px !important;
@@ -31,7 +31,8 @@
   width: 0;
   position: fixed;
   left: -20px;
-  background-color: #B3A894;
+  background-color: #40c28d;
+  opacity: 0.4;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 100px;
@@ -43,7 +44,7 @@
   padding: 5px 5px 5px 34px;
   text-decoration: none;
   font-size: 25px;
-  color: #8298B3;
+  color: #000000;
   display: block;
   transition: 0.3s
 }
