@@ -1,18 +1,24 @@
+.header-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+
 .header-style-bold {
 font-family: Roboto;
 font-style: normal;
 font-weight: bold;
-font-size: 32px;
-line-height: 37px;
+font-size: 60px;
 text-align: center;
-letter-spacing: 0.08em;
+letter-spacing: 6px;
 color: #000000;
 }
 .header-style-regular {
 font-family: Roboto;
 font-style: normal;
 font-weight: 300;
-font-size: 32px;
-line-height: 37px;
+font-size: 60px;
+letter-spacing: 6px;
 color: #000000;
 }
