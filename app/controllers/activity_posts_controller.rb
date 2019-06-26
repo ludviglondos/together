@@ -46,24 +46,22 @@ class ActivityPostsController < ApplicationController
 
   def new
     @activity_post = ActivityPost.new
-
-    if true #Need to change to the correct logic when it is displayed on index page
-      @activity_post_default = ActivityPost.new(description: "Lets take a Walk!", duration: 15, capacity: 10, title: "Walking")
-      @activity_post_default.category_id = Category.find_by_name("Walking").id
-    elsif false
-      @activity_post_default = ActivityPost.new(description: "Lets have a Fika!", duration: 15, capacity: 2, title: "Fika")
-      @activity_post_default.category_id = Category.find_by_name("Fika").id
-    elsif false
-      @activity_post_default = ActivityPost.new(description: "Lets have a Lunch!", duration: 15, capacity: 2, title: "Lunch")
-      @activity_post_default.category_id = Category.find_by_name("Lunch").id
-    else
-      @activity_post_default = ActivityPost.new(description: "I want to play Padel come join me!", duration: 15, capacity: 4, title: "Padel")
-      @activity_post_default.category_id = Category.find_by_name("Padel").id
-    end
   end
 
   def create
     @activity_post = ActivityPost.new(activity_post_params)
+    if params[:quick_create]
+      category = Category.find(params[:activity_post][:category_id])
+      @activity_post.category = category
+      case category.name
+      when 'Walking' #Need to change to the correct logic when it is displayed on index page
+        @activity_post.update(description: "Lets take a Walk!", duration: 20, capacity: 10, title: "Lets take a Walk!")
+      when 'Fika'
+        @activity_post.update(description: "Lets have a Fika!", duration: 15, capacity: 2, title: "Lets have a Fika!")
+      when 'Sports'
+        @activity_post.update(description: "Im planning to do the following sport activity, come join me!", duration: 60, capacity: 4, title: "Sport event!")
+      end
+    end
     @activity_post.user = current_user
     if @activity_post.save
       #alert
