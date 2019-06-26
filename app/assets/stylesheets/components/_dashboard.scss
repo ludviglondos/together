@@ -89,6 +89,14 @@ line-height: 23px;
   flex-direction: column;
   flex-grow:1;
   margin-top: 10px;
+  height: 520px;
+  overflow: auto;
+}
+.dashboard-activities-arrow-box {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
 .dashboard-next-up-container {
