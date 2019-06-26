@@ -43,6 +43,11 @@ CARDS
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(1);
+    transition: box-shadow 0.1s ease, transform 0.1s ease;
+    &:hover {
+      transform: scale(0.8);
+    }
 }
 
 .invite-btn {
@@ -52,6 +57,10 @@ CARDS
     display: flex;
     justify-content: center;
     align-items: center;
+   &:hover {
+
+    cursor: pointer;
+    }
 }
 
 .fas.fa-check {
@@ -73,6 +82,11 @@ CARDS
 .fas.fa-user-friends {
     color: #fff;
     font-size: 20px;
+    transform: scale(1);
+    transition: box-shadow 0.1s ease, transform 0.1s ease;
+    &:hover {
+      transform: scale(1.2);
+    }
 }
 
 .fas.fa-users {
