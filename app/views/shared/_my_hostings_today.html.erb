@@ -1,0 +1,58 @@
+
+
+<% @my_activity_posts_hosting.each do |activity| %>
+ <% if Date.today.strftime("%B%e") == activity.start_time.strftime("%B%e") %>
+    <div class="card-product row">
+      <div class="col-2" style ="height: 120px;">
+          <%= image_tag activity.category.url_small, alt: "activity-category" %>
+      </div>
+      <div class="col-8 d-flex flex-column justify-content-between" style ="height: 120px";>
+          <div class="d-flex justify-content-between">
+              <div>
+                <h2><%=activity.start_time.strftime("%H:%M")%> - <%= (activity.start_time + (activity.duration*60)).strftime("%H:%M") %></h2>
+              </div>
+              <div class="d-flex flex-grow">
+                <h2><%= activity.title %></h2>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-map-marker-alt"></i>
+                <h2><%=activity.location%></h2>
+              </div>
+          </div>
+          <div class="d-flex flex-grow flex-column">
+            <p><%= activity.description %></p>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="fas fa-users"></i>
+              <% if activity.users.count == 0%>
+                <h2> Be the first to join!</h2>
+              <% else %>
+            <% activity.users.first(3).each do |user| %>
+                  <%= image_tag user.url, alt: "avatar-bordered", class: "avatar-bordered" %>
+              <% end %>
+              <% if activity.users.count >= 4 %>
+                + <%=(activity.users.count - 3)  %> more
+              <% end %>
+            <% end %>
+          </div>
+      </div>
+      <div class="col-2" style ="height: 120px";>
+        <div class="invite-btn">
+          <i class="fas fa-user-friends"></i>
+        </div>
+          <div class="cancel-btn">
+        <%=link_to activity_post_path(activity.id), method: :delete  do %>
+            <h4>Cancel Activity</h4>
+        <% end %>
+          </div>
+          <div class="edit-btn">
+        <%=link_to edit_activity_post_path(activity.id), method: :post  do %>
+            <span>Edit Activity</span>
+        <% end %>
+          </div>
+      </div>
+  </div>
+
+
+  <% end %>
+<% end %>

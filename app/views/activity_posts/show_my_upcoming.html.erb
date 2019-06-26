@@ -1,31 +1,17 @@
 <div class="text-center">
   <h2>Upcoming Activities</h2>
 </div>
-  <div class="container dashboard-container">
-    <div class="d-flex">
-      <% @my_activity_post_joined.each do |booking| %>
-        <div class="card_standard">
-          <div class="card_standard_container">
-            <h2><%=booking.activity_post.category.name%></h2>
-            <div class="d-flex">
-              <i class="far fa-clock"></i>
-              <h2><%=booking.activity_post.start_time.strftime("%l:%M") %></h2>
-           </div>
-            <h2><%= booking.activity_post.duration%> min</h2>
-            <div class="d-flex">
-              <i class="fas fa-users"></i>
-              <h2><%= @activity_users.where(activity_post_id: booking.activity_post_id).count %>/ <%= booking.activity_post.capacity%></h2>
-            </div>
-            <div class="d-flex">
-              <i class="fas fa-map-marker-alt"></i>
-              <h2><%= booking.activity_post.location %></h2>
-            </div>
-            <h2><%= booking.activity_post.description %></h2>
-            <%=link_to cancel_activity_path(booking), method: :delete  do %>
-              <span class="join_event_button">Cancel</span>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
+<div class="container dashboard-container">
+      <div class="dashboard-header-my-hosting">
+        <h2>Today</h2>
+      </div>
+      <div class="dashboard-my-hosting-container">
+          <%= render 'shared/my_hostings_today' %>
+      </div>
+      <div class="dashboard-header-my-hosting">
+        <h2>Future Events</h2>
+      </div>
+      <div class="dashboard-my-hosting-container">
+          <%= render 'shared/my_hostings_future' %>
+      </div>
+</div>
