@@ -10,10 +10,11 @@
     margin-top: 20px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 36px;
     line-height: 42px;
     color: #305e72;
+    letter-spacing: 5px;
   }
 }
 
@@ -28,6 +29,7 @@ background-size: cover;
 transform: scale(0.98);
  transition: box-shadow 0.2s ease, transform 0.2s ease;
 h4 {
+  letter-spacing: 2px;
   font-family: Roboto;
 font-style: normal;
 font-weight: bolder;
@@ -118,6 +120,7 @@ border-radius: 3px;
 transform: scale(0.98);
  transition: box-shadow 0.2s ease, transform 0.2s ease;
   h4 {
+
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
