@@ -10,6 +10,7 @@
             <%= f.input :duration, placeholder: 'Type in minutes the length of the activity', as: :hidden %>
             <%= f.input :description, as: :text, placeholder: 'Add the information of the activity..', as: :hidden %>
             <%= f.input :capacity, as: :hidden %>
+            <%= f.hidden_field :quick_create, value: true %>
             <%= f.button :submit, "Quick Create"%>
           <% end %>
         </div>
