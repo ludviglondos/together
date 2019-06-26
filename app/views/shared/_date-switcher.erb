@@ -5,7 +5,7 @@
     <% end  %>
   <% end %>
   <div class="date-switcher-date-box">
-    <h2><%= @date_show %></h2>
+    <span><%= @date_show %></span>
   </div>
   <div>
     <%= link_to date_activities_path(date: (@date + 1).strftime("%Y-%m-%e")) do %>
