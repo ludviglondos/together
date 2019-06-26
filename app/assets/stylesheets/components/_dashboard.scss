@@ -18,12 +18,14 @@ color: #000000;
 
 .dashboard-category-container {
 display: flex;
-width: 180px;
+width: 170px;
 height: 120px;
 align-items: center;
 justify-content: center;
-border-radius: 2px;
+border-radius: 3px;
 background-size: cover;
+transform: scale(0.98);
+ transition: box-shadow 0.2s ease, transform 0.2s ease;
 h4 {
   font-family: Roboto;
 font-style: normal;
@@ -40,31 +42,32 @@ color: #FFFFFF;
 }
 }
 
-.dashboard-new-category {
-width: 140px;
-height: 120px;
-background: #EFEFEF;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-border: 1px dashed #4E4E4E;
-text-align: center;
-border-radius: 2px;
-  h4 {
-    margin-top: 10px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    color: #009975;
-  }
-  &:hover{
-  transform: scale(1);
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
-  cursor: pointer;
-  }
-}
+// .dashboard-new-category {
+// width: 140px;
+// height: 120px;
+// background: #EFEFEF;
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+// justify-content: center;
+// border: 1px dashed #4E4E4E;
+// text-align: center;
+// border-radius: 2px;
+
+//   h4 {
+//     margin-top: 10px;
+//     font-family: Roboto;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 16px;
+//     color: #009975;
+//   }
+//   &:hover{
+//   transform: scale(1);
+//   box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+//   cursor: pointer;
+//   }
+// }
 .dashboard-new-text-box{
   display: flex;
   flex-direction: column;
@@ -93,7 +96,7 @@ height: 508px;
 // padding-top: 15px;
 background: rgba(0, 153, 117, 0.75);
 box-shadow: 0px 4px 10px rgba(172, 172, 172, 0.25);
-border-radius: 2px;
+border-radius: 3px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -108,13 +111,11 @@ display: flex;
 align-items: center;
 margin-top: 10px;
 justify-content: center;
-
 padding-top: 15px;
-border: 1px dashed #4E4E4E;
 text-align: center;
-border-radius: 5px;
+border-radius: 3px;
 transform: scale(0.98);
- transition: box-shadow 0.3s ease, transform 0.3s ease;
+ transition: box-shadow 0.2s ease, transform 0.2s ease;
   h4 {
     font-family: Roboto;
     font-style: normal;
