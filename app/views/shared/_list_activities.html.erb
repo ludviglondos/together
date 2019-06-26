@@ -1,5 +1,5 @@
 
-  <% @activity_posts.each do |activity| %>
+  <% @activity_posts.order(start_time: :asc).each do |activity| %>
       <div class="card-product">
         <%= image_tag activity.category.url_small, alt: "activity-category" %>
         <div class="card-content">
@@ -7,21 +7,36 @@
             <div>
               <h2><%=activity.start_time.strftime("%H:%M")%> - <%= (activity.start_time + (activity.duration*60)).strftime("%H:%M") %></h2>
             </div>
-            <i class="fas fa-map-marker-alt"></i>
-            <h5><%=activity.location%></h5>
+            <div>
+              <h3><%= activity.title %></h3>
+            </div>
           </div>
           <div class="location">
             <p><%= activity.description %></p>
           </div>
           <div class="capacity">
-            <i class="fas fa-users"></i>
-             <% activity.users.first(3).each do |user| %>
-            <%= image_tag user.url, alt: "avatar-bordered", class: "avatar-bordered" %>
-            <% end %>
-            <div id="amount-capacity">
-              <% if activity.users.count >= 4 %>
-              + <%=(activity.users.count - 3)  %> more
+            <div class="d-flex align-items-center">
+              <i class="fas fa-users"></i>
+              <% if activity.users.count == 0%>
+                <div class="card-users-joined">
+                  <h2> Be the first to join!</h2>
+                </div>
+              <% else %>
+               <% activity.users.first(3).each do |user| %>
+              <div>
+                <%= image_tag user.url, alt: "avatar-bordered", class: "avatar-bordered" %>
+              </div>
               <% end %>
+              <% end %>
+              <div id="amount-capacity">
+                <% if activity.users.count >= 4 %>
+                + <%=(activity.users.count - 3)  %> more
+                <% end %>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="fas fa-map-marker-alt"></i>
+              <h5><%=activity.location%></h5>
             </div>
           </div>
         </div>

@@ -1,6 +1,4 @@
-
-
-<% @my_activity_posts_hosting.each do |activity| %>
+<% @my_activity_post_joined.each do |activity| %>
  <% if Date.today.strftime("%B%e") == activity.start_time.strftime("%B%e") %>
  <div class="card-product">
         <%= image_tag activity.category.url_small, alt: "activity-category" %>

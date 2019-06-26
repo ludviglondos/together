@@ -16,6 +16,13 @@ puts "Database cleaned"
 user_a = User.create!(email: "test@email.com", password: "123456", first_name: "Ludvig", last_name: "L", username: "Laddy", url: "ludvig_londos.jpeg")
 user_b = User.create!(email: "test2@email.com", password: "123456", first_name: "Karina", last_name: "H", username: "Pixelmybit", url: "pixelmybit.jpeg")
 user_c = User.create!(email: "test3@email.com", password: "123456", first_name: "Johan", last_name: "H", username: "Johak11", url: "casual.jpg")
+user_d = User.create!(email: "test4@email.com", password: "123456", first_name: "Andreas", last_name: "M", username: "Johak12", url: "casual.jpg")
+user_e = User.create!(email: "test5@email.com", password: "123456", first_name: "Fiona", last_name: "K", username: "Johak13", url: "casual.jpg")
+user_f = User.create!(email: "test6@email.com", password: "123456", first_name: "Nick", last_name: "F", username: "Johak14", url: "casual.jpg")
+user_g = User.create!(email: "test7@email.com", password: "123456", first_name: "Amanda", last_name: "S", username: "Johak15", url: "casual.jpg")
+user_h = User.create!(email: "test8@email.com", password: "123456", first_name: "Mike", last_name: "S", username: "Johak16", url: "casual.jpg")
+user_i = User.create!(email: "test9@email.com", password: "123456", first_name: "Anne", last_name: "H", username: "Johak17", url: "casual.jpg")
+user_j = User.create!(email: "test10@email.com", password: "123456", first_name: "Vincent", last_name: "V", username: "Johak18", url: "casual.jpg")
 
 # Generate the test categories
 category_1 = Category.create!(name: "Walking", url: "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", url_small:"https://images.unsplash.com/photo-1476459216969-94c7100f88a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80")
@@ -23,19 +30,20 @@ category_2 = Category.create!(name: "Fika", url: "https://images.unsplash.com/ph
 category_3 = Category.create!(name: "Sports", url: "https://images.unsplash.com/photo-1527634311077-9943f7df34e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", url_small:"https://images.unsplash.com/photo-1534255355456-2d8e6930c5e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
 
 # Generate a number of test activities for the 28th june
-activity_post_1 = ActivityPost.create!(description: "I plan to take a walk around the IKEA building", start_time: "2019-06-28 12:45", duration: 15, capacity: 2, title: "Walk and not talk", category_id: category_1.id , user_id: user_a.id)
-activity_post_2 = ActivityPost.create!(description: "Lets take a walk around the IKEA building", start_time: "2019-06-28 11:00", duration: 20, capacity: 10, title: "Talk and walk", category_id: category_1.id , user_id: user_b.id)
-activity_post_3 = ActivityPost.create!(description: "We need to move how about a a walk around the IKEA building", start_time: "2019-06-28 14:40", duration: 30, capacity: 5, title: "Walk and talk", category_id: category_1.id , user_id: user_c.id)
-activity_post_4 = ActivityPost.create!(description: "Anyone want to go to a field?", start_time: "2019-06-28 12:30", duration: 10, capacity: 5, title: "Walk and talk", category_id: category_1.id , user_id: user_b.id)
+activity_post_1 = ActivityPost.create!(description: "I plan to take a walk to the pier and back again", start_time: "2019-06-28 12:45", duration: 15, capacity: 2, title: "Walk and not talk", category_id: category_1.id , user_id: user_a.id, location: "Sockerbruket")
+activity_post_2 = ActivityPost.create!(description: "Lets do some power walking!", start_time: "2019-06-28 11:00", duration: 20, capacity: 10, title: "Talk and walk", category_id: category_1.id , user_id: user_i.id)
+activity_post_3 = ActivityPost.create!(description: "How about a walk around the IKEA building", start_time: "2019-06-28 14:40", duration: 30, capacity: 5, title: "Walk and talk", category_id: category_1.id , user_id: user_j.id ,location: "Sockerbruket")
+activity_post_4 = ActivityPost.create!(description: "Anyone want to go to the beach?", start_time: "2019-06-28 12:30", duration: 10, capacity: 5, title: "Walk and talk", category_id: category_1.id , user_id: user_b.id)
 
-activity_post_5 = ActivityPost.create!(description: "I want to have a fika and talk about the news", start_time: "2019-06-28 10:30", duration: 30, capacity: 2, title: "Just fika", category_id: category_2.id , user_id: user_a.id)
-activity_post_6 = ActivityPost.create!(description: "Kanelbulle? Ja tack!", start_time: "2019-06-28 10:00", duration: 45, capacity: 2, title: "Fika", category_id: category_2.id , user_id: user_b.id)
-activity_post_7 = ActivityPost.create!(description: "Im leaving for china, come say bye with a fika!", start_time: "2019-06-28 12:45", duration: 10, capacity: 20, title: "Fika bye bye", category_id: category_2.id , user_id: user_a.id)
+activity_post_5 = ActivityPost.create!(description: "I want to have a fika and talk about the news", start_time: "2019-06-28 10:30", duration: 30, capacity: 2, title: "Just fika", category_id: category_2.id , user_id: user_g.id)
+activity_post_6 = ActivityPost.create!(description: "Kanelbulle? Ja tack!", start_time: "2019-06-28 10:30", duration: 45, capacity: 40, title: "Fika for the many", category_id: category_2.id , user_id: user_b.id)
+activity_post_7 = ActivityPost.create!(description: "I want to fika and voice my idea for a new app..", start_time: "2019-06-28 14:45", duration: 10, capacity: 20, title: "Fika and debate?", category_id: category_2.id , user_id: user_d.id, location: "Sockerbruket" )
 
-activity_post_8 = ActivityPost.create!(description: "I'm having lunch at the canteen at the store, anyone want to join?", start_time: "2019-06-28 11:35", duration: 35, capacity: 2, title: "Lunch at the store", category_id: category_3.id , user_id: user_c.id)
-activity_post_9 = ActivityPost.create!(description: "Lunch?", start_time: "2019-06-28 12:00", duration: 30, capacity: 2, title: "Lunch at Hubhult", category_id: category_3.id , user_id: user_a.id)
-activity_post_10 = ActivityPost.create!(description: "I plan to take eat at ChopChop", start_time: "2019-06-28 12:15", duration: 30, capacity: 4, title: "Asian food time", category_id: category_3.id , user_id: user_b.id)
-activity_post_11 = ActivityPost.create!(description: "I want to eat and have my idea for the new app challenged", start_time: "2019-06-28 11:50", duration: 45, capacity: 2, title: "Lunch and debate?", category_id: category_3.id , user_id: user_b.id)
+activity_post_8 = ActivityPost.create!(description: "Do you dare to face me?", start_time: "2019-06-28 15:35", duration: 180, capacity: 2, title: "Chess Match", category_id: category_3.id , user_id: user_c.id)
+activity_post_9 = ActivityPost.create!(description: "We need one more for a Padel match..", start_time: "2019-06-28 15:00", duration: 60, capacity: 4, title: "Padel", category_id: category_3.id , user_id: user_a.id)
+activity_post_10 = ActivityPost.create!(description: "Come a long and take a refreshing dip!", start_time: "2019-06-28 10:15", duration: 30, capacity: 2, title: "Swimming", category_id: category_3.id , user_id: user_b.id, location: "Sockerbruket")
+activity_post_11 = ActivityPost.create!(description: "Join us for a lunch run, everyone can join! ", start_time: "2019-06-28 11:50", duration: 45, capacity: 10, title: "Running", category_id: category_3.id , user_id: user_e.id)
+activity_post_12 = ActivityPost.create!(description: "Service Desk vs Infrastructure Managers", start_time: "2019-06-28 10:00", duration: 90, capacity: 22, title: "Fotball", category_id: category_3.id , user_id: user_g.id, location: "Älmhult")
 
 # Generate a number of bookings
 booking_1 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_1.id)
@@ -56,18 +64,4 @@ booking_15 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity
 booking_16 = ActivityUser.create!(user_id: user_a.id, activity_post_id: activity_post_1.id)
 
 # Generate a number of test activities for the 29th june
-activity_post_22 = ActivityPost.create!(description: "I plan to take a walk around the IKEA building", start_time: "2019-06-29 12:45", duration: 15, capacity: 2, title: "Walk and not talk", category_id: category_1.id , user_id: user_a.id)
-activity_post_12 = ActivityPost.create!(description: "Lets take a walk around the IKEA building", start_time: "2019-06-29 11:00", duration: 20, capacity: 10, title: "Talk and walk", category_id: category_1.id , user_id: user_b.id)
-activity_post_13 = ActivityPost.create!(description: "We need to move how about a a walk around the IKEA building", start_time: "2019-06-29 14:40", duration: 30, capacity: 5, title: "Walk and talk", category_id: category_1.id , user_id: user_c.id)
-activity_post_14 = ActivityPost.create!(description: "Anyone want to go to a field?", start_time: "2019-06-29 12:30", duration: 10, capacity: 5, title: "Walk and talk", category_id: category_1.id , user_id: user_b.id)
-
-activity_post_15 = ActivityPost.create!(description: "I want to have a fika and talk about the news", start_time: "2019-06-29 10:30", duration: 30, capacity: 2, title: "Just fika", category_id: category_2.id , user_id: user_a.id)
-activity_post_16 = ActivityPost.create!(description: "Kanelbulle? Ja tack!", start_time: "2019-06-29 10:00", duration: 45, capacity: 2, title: "Fika", category_id: category_2.id , user_id: user_b.id)
-activity_post_17 = ActivityPost.create!(description: "Im leaving for china, come say bye with a fika!", start_time: "2019-06-29 12:45", duration: 10, capacity: 20, title: "Fika bye bye", category_id: category_2.id , user_id: user_a.id)
-
-activity_post_18 = ActivityPost.create!(description: "I'm having lunch at the canteen at the store, anyone want to join?", start_time: "2019-06-29 11:35", duration: 35, capacity: 2, title: "Lunch at the store", category_id: category_3.id , user_id: user_c.id)
-activity_post_19 = ActivityPost.create!(description: "Lunch?", start_time: "2019-06-29 12:00", duration: 30, capacity: 2, title: "Lunch at Hubhult", category_id: category_3.id , user_id: user_a.id)
-activity_post_20 = ActivityPost.create!(description: "I plan to take eat at ChopChop", start_time: "2019-06-29 12:15", duration: 30, capacity: 4, title: "Asian food time", category_id: category_3.id , user_id: user_b.id)
-activity_post_21 = ActivityPost.create!(description: "I want to eat and have my idea for the new app challenged", start_time: "2019-06-29 11:50", duration: 45, capacity: 2, title: "Lunch and debate?", category_id: category_3.id , user_id: user_b.id)
-
 

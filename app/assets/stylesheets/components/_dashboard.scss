@@ -19,6 +19,27 @@
   }
 }
 
+.dashboard-container-my-hosting {
+  border-radius: 3px;
+  background-color: rgba(251, 251, 251, 0.95);
+  width: 700px;
+  height: 770px;
+  margin-top: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0px 4px 20px rgba(91, 91, 91, 0.25);
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: #305e72;
+    letter-spacing: 5px;
+  }
+}
 .dashboard-category-container {
 display: flex;
 width: 170px;
@@ -117,7 +138,7 @@ transform: scale(0.98);
   }
 }
 .dashboard-header-my-hosting {
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 .dashboard-my-hosting-container{
