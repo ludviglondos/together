@@ -27,7 +27,7 @@ class ActivityPostsController < ApplicationController
       @date_show = @date.strftime("%A, %b %d")
     end
 
-    @activity_posts_next_up = ActivityPost.on_date(@date)
+    @activity_posts_next_up = ActivityPost.all
 
     @activity_posts = ActivityPost.on_date(@date)
 

@@ -1,14 +1,14 @@
 
-<%  @activity_posts_next_up.order(start_time: :asc).first(5).each do |activity|%>
+<%  @activity_posts_next_up.order(start_time: :asc).first(3).each do |activity|%>
   <div class="small-card-product">
     <%= image_tag activity.category.url, alt: "alttext" %>
     <div class="small-card-content">
       <div class="small-card-product-infos d-flex justify-content-space-between">
-        <h2><%= activity.category.name %></h2>
-        <h2><%=activity.start_time.strftime("%l:%M")%></h2>
+        <h2><%= activity.title %></h2>
+        <h2><%= activity.location %></h2>
       </div>
       <div class="location d-flex justify-content-center">
-        <p><%= activity.location %></p>
+        <p><%=activity.start_time.strftime("%A, %l:%M")%></p>
       </div>
     </div>
     <div class="small-container-btn">
