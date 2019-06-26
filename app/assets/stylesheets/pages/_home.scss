@@ -21,53 +21,84 @@ p {
 }
 
 h1 {
-  font-size: 3.5rem;
-  letter-spacing: 9px;
-  color: rgba(0,0,0,0.5)
+  font-family: 'Roboto';
+  font-size: 50px;
+  letter-spacing: 12px;
+  color: rgba(0,0,0,1);
+  margin-left: 5px;
+  margin-right: 5px;
 }
 }
 
+#together-text {
+  color: rgba(0,0,0,0.5) !important;
+}
 
+.title-home {
+  display: flex;
+}
 .start_button {
-  // display: inline-block;
-    border-radius: 10px;
-    background-color: $green;
+border-radius: 6px;
+    background-color: #45b397;
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 30px;
-    /* padding: 5px; */
+    font-size: 31px;
     width: 12%;
-    /* transition: all 0.5s; */
     cursor: pointer;
     font-weight: bold;
     letter-spacing: 2px;
-    /* line-height: 3; */
-    height: 100px;
-    width: 400px;
-//   font-family: $join-btn;
-// span {
-//   cursor: pointer;
-//   display: inline-block;
-//   position: relative;
-//   transition: 0.5s;
-// }
-// span:after {
-//   content: '\00bb';
-//   position: absolute;
-//   opacity: 0;
-//   top: 0;
-//   right: -20px;
-//   transition: 0.5s;
+    height: 64px;
+    width: 130px;
 
-// }
-// &:hover span {
-//   padding-right: 25px;
-// }
-// &:hover span:after {
-//   opacity: 1;
-//   right: 0;
-// }
 
+}
+.btn {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  font-size: 31px;
+  color: #FFFFFF;
+  font-weight: bold;
+    letter-spacing: 2px;
+    height: 64px;
+    width: 250px;
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+ }
+
+/* Demo Stuff End -> */
+
+/* <- Magic Stuff Start */
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+
+.btn-2 {
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
+
+.btn-3 {
+  background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}
+
+.btn-4 {
+  background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+}
+
+.btn-5 {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
 }
 
