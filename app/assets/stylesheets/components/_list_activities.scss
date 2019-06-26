@@ -14,7 +14,7 @@
 CARDS
 ******************************************/
 .container-btn {
-  background-color: #e3e8ea;
+  background-color: #305f72;
   border: none;
   color: white;
   text-align: center;
@@ -45,12 +45,17 @@ CARDS
     align-items: center;
 }
 .invite-btn {
-  background-color: #305f72;
+  background-color: #c3cbce;
   height: 42%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.fas.fa-check {
+  font-size: 22px;
+  color: white;
 }
 
 .fas.fa-plus {
