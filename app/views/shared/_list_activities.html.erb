@@ -15,12 +15,12 @@
           </div>
           <div class="capacity">
             <i class="fas fa-users"></i>
-             <% activity.users.first(5).each do |user| %>
+             <% activity.users.first(3).each do |user| %>
             <%= image_tag user.url, alt: "avatar-bordered", class: "avatar-bordered" %>
             <% end %>
             <div id="amount-capacity">
-              <% if activity.users.count > 4 %>
-              + <%=(activity.users.count - 5)  %> more
+              <% if activity.users.count >= 4 %>
+              + <%=(activity.users.count - 3)  %> more
               <% end %>
             </div>
           </div>
