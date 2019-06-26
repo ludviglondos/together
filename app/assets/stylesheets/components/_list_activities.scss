@@ -74,9 +74,8 @@ CARDS
 }
 
 .fas.fa-map-marker-alt {
-    color: #000;
-    margin-left: 43px;
-    margin-right: 12px;
+    color: #305c72;
+    margin-right: 5px;
     font-size: 16px;
 }
 .fas.fa-user-friends {
@@ -97,11 +96,18 @@ CARDS
 
 .capacity {
   display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     margin-top: 10px;
 }
 
+.card-users-joined h2 {
+    font-size: 14px !important;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 0px;
+    font-family: 'sans-serif';
+    }
 .avatar-bordered {
   width: 25px !important;
   height: 25px !important;
@@ -139,14 +145,15 @@ CARDS
     font-family: 'sans-serif';
 }
 
-h5 {
+.card-product h5 {
+  padding: 0px;
+  margin: 0px;
     font-size: 1em;
-    margin: 1.67em 0;
   font-family: 'sans-serif';
   font-weight: bold;
 }
 .card-product p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin: 0;
@@ -155,10 +162,25 @@ h5 {
 .card-product-infos {
   display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 20px;
     margin: 0;
     margin-top: 3px;
     margin-bottom: 10px;
+    h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 2px;
+    font-family: 'sans-serif';
+    }
+    h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 1px;
+    font-family: 'sans-serif';
+    }
 }
 
 .card-product .card-content {

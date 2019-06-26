@@ -104,7 +104,7 @@ class ActivityPostsController < ApplicationController
   def set_vars_for_profile
     @categories = Category.all
     @activity_users = ActivityUser.all
-    @my_activity_post_joined = current_user.activity_users
+    @my_activity_post_joined = current_user.activity_users.activity_post
     @my_activity_posts_hosting = current_user.activity_posts.order(start_time: :asc)
   end
 end
