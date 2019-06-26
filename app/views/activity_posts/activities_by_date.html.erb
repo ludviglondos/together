@@ -11,6 +11,11 @@
       <div class="dashboard-activities-container">
         <%= render 'shared/list_activities' %>
       </div>
+      <div class="dashboard-activities-arrow-box">
+        <% if @activity_posts.count > 4 %>
+          <h2><i class="fas fa-angle-double-down"></i></h2>
+        <% end %>
+      </div>
     </div>
     <div class="col-4">
       <h2 class="text-center">Next up!</h2>
