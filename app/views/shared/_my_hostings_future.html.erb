@@ -46,7 +46,7 @@
             <h5>Edit</h5>
           </div>
           <div class="destroy-btn">
-         <%= link_to activity_post_activity_users_path(activity.id), method: :post, remote: true  do %>
+         <%= link_to activity_post_path(activity.id), method: :delete  do %>
               <i class="fas fa-times"></i>
             <% end %>
           </div>
