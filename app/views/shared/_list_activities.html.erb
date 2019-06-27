@@ -1,7 +1,13 @@
 
   <% @activity_posts.order(start_time: :asc).each do |activity| %>
       <div class="card-product">
+        <% if activity.category.name == "Sports" %>
+        <div class="sport-cards">
+          <%= image_tag activity.url_extra, alt: "activity-category"%>
+        </div>
+          <% else %>
         <%= image_tag activity.category.url_small, alt: "activity-category" %>
+        <% end %>
         <div class="card-content">
           <div class="card-product-infos">
             <div>

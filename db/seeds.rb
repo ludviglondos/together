@@ -43,11 +43,11 @@ activity_post_5 = ActivityPost.create!(description: "I want to have a fika and t
 activity_post_6 = ActivityPost.create!(description: "Kanelbulle? Ja tack!", start_time: "2019-06-28 12:30", duration: 45, capacity: 40, title: "Fika for the many", category_id: category_2.id , user_id: user_b.id)
 activity_post_7 = ActivityPost.create!(description: "I want to fika and voice my idea for a new app..", start_time: "2019-06-28 13:45", duration: 10, capacity: 2, title: "Fika and debate?", category_id: category_2.id , user_id: user_d.id, location: "Sockerbruket" )
 
-activity_post_8 = ActivityPost.create!(description: "Do you dare to face me?", start_time: "2019-06-28 11:00", duration: 180, capacity: 2, title: "Chess Match", category_id: category_3.id , user_id: user_e.id)
-activity_post_9 = ActivityPost.create!(description: "We need one more for a Padel match..", start_time: "2019-06-28 15:00", duration: 60, capacity: 4, title: "Padel", category_id: category_3.id , user_id: user_k.id)
-activity_post_10 = ActivityPost.create!(description: "Come along and take a refreshing dip!", start_time: "2019-06-28 11:15", duration: 30, capacity: 2, title: "Swimming", category_id: category_3.id , user_id: user_b.id, location: "Sockerbruket")
-activity_post_11 = ActivityPost.create!(description: "Join us for a early lunch run, everyone can join! ", start_time: "2019-06-28 10:15", duration: 45, capacity: 10, title: "Running", category_id: category_3.id , user_id: user_e.id)
-activity_post_12 = ActivityPost.create!(description: "Service Desk vs Everybody", start_time: "2019-06-28 10:00", duration: 90, capacity: 22, title: "Football", category_id: category_3.id , user_id: user_g.id, location: "Älmhult")
+activity_post_8 = ActivityPost.create!(description: "Do you dare to face me?", start_time: "2019-06-28 10:15", duration: 180, capacity: 2, title: "Chess", category_id: category_3.id , user_id: user_e.id, url_extra: "chess.jpg")
+activity_post_9 = ActivityPost.create!(description: "We need one more for a Padel match..", start_time: "2019-06-28 11:15", duration: 60, capacity: 4, title: "Padel", category_id: category_3.id , user_id: user_k.id, url_extra:"tennisball.jpg")
+activity_post_10 = ActivityPost.create!(description: "Come along and take a refreshing dip!", start_time: "2019-06-28 15:15", duration: 30, capacity: 2, title: "Swimming", category_id: category_3.id , user_id: user_b.id, location: "Sockerbruket", url_extra: "https://images.unsplash.com/photo-1534255355456-2d8e6930c5e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+activity_post_11 = ActivityPost.create!(description: "Join us for a early lunch run, everyone can join! ", start_time: "2019-06-28 11:15", duration: 45, capacity: 10, title: "Running", category_id: category_3.id , user_id: user_e.id, url_extra:"https://images.unsplash.com/photo-1527634311077-9943f7df34e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+activity_post_12 = ActivityPost.create!(description: "Service Desk vs Everybody", start_time: "2019-06-28 10:00", duration: 90, capacity: 22, title: "Football", category_id: category_3.id , user_id: user_g.id, location: "Älmhult", url_extra: "football.jpg")
 
 # Generate a number of bookings for walking
 booking_1 = ActivityUser.create!(user_id: user_m.id, activity_post_id: activity_post_1.id)
@@ -104,8 +104,8 @@ booking_49 = ActivityUser.create!(user_id: user_f.id, activity_post_id: activity
 
 # Generate a number of test activities for the 29th june
 
-activity_post_14 = ActivityPost.create!(description: "Training for marathon, need a running buddy! ", start_time: "2019-06-29 15:50", duration: 45, capacity: 10, title: "Running", category_id: category_3.id , user_id: user_e.id)
-activity_post_15 = ActivityPost.create!(description: "Bring your pick-nick and enjoy a game of cricket", start_time: "2019-06-29 09:00", duration: 270, capacity: 22, title: "Cricket match", category_id: category_3.id , user_id: user_j.id, location: "Älmhult")
+activity_post_14 = ActivityPost.create!(description: "Training for marathon, need a running buddy! ", start_time: "2019-06-29 15:50", duration: 45, capacity: 10, title: "Running", category_id: category_3.id , user_id: user_e.id, url_extra:"https://images.unsplash.com/photo-1527634311077-9943f7df34e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+activity_post_15 = ActivityPost.create!(description: "Bring your pick-nick and enjoy a game of cricket", start_time: "2019-06-29 09:00", duration: 270, capacity: 22, title: "Cricket match", category_id: category_3.id , user_id: user_j.id, location: "Älmhult", url_extra: "cricket.jpg")
 
 
 
