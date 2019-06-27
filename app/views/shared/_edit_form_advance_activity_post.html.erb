@@ -1,8 +1,5 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 offset-sm-3">
+     <div class="quick-form-style">
       <div class="form-style">
-        <h2 class="text-center">Edit the Event</h2>
         <%= simple_form_for activity_post do |f| %>
         <%= f.association :category, as: :select%>
         <%= f.input :title, placeholder: "Name of Event..."%>
@@ -10,15 +7,8 @@
         <%= f.input :duration, placeholder: 'Type in minutes the length of the activity' %>
         <%= f.input :description, as: :text, placeholder: 'Add the information of the activity..' %>
         <%= f.input :capacity, placeholder: 'Pick a number' %>
-        <% if params[:action] == 'edit' %>
-          <%= f.button :submit, "Apply changes" %>
-        <% else %>
-          <%= f.button :submit, "Add the activity"%>
-        <% end %>
+        <%= f.button :submit, "Apply changes" %>
         <% end %>
        </div>
-   </div>
-  </div>
-</div>
-
+       </div>
 

@@ -1,0 +1,6 @@
+function removeActivity(activityId) {
+  const activityCard = document.getElementById(`card-activity-${activityId}`);
+  activityCard.remove();
+}
+
+removeActivity(<%= @activity_post.id %>);

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :activity_users, only: [:create ]
   end
   delete "cancel_activity/:id", to: 'activity_posts#cancel_activity', as: :cancel_activity
+  delete "cancel_activity_hosting/:id", to: 'activity_posts#cancel_activity_hosting', as: :cancel_activity_hosting
   get "activities-by-date", to: 'activity_posts#activities_by_date', as: :date_activities
   resources :activity_users, only: [:destroy ]
   # get    "my_upcoming_activities",      to: "activity_posts#show_my_upcoming"

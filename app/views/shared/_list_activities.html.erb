@@ -40,17 +40,30 @@
           </div>
         </div>
         <div class="container-btn">
+            <% if activity.has_user?(current_user) %>
+            <% if activity.user == current_user %>
+            <div class="invite-btn">
+              <i class="fas fa-user-friends"></i>
+            </div>
+            <div class="destroy-btn">
+         <%= link_to activity_post_path(activity), method: :delete  do %>
+              <i class="fas fa-times"></i>
+            <% end %>
+          </div>
+        <%else%>
+        <div class="invite-btn">
+          <i class="fas fa-user-friends"></i>
+        </div>
+        <div class="cancel-btn">
+              <%=link_to cancel_activity_path(activity), method: :delete  do %>
+          <i class="fas fa-minus"></i>
+          <% end %>
+        </div>
+        <% end %>
+        <%else%>
           <div class="invite-btn">
             <i class="fas fa-user-friends"></i>
           </div>
-            <% if activity.has_user?(current_user) %>
-            <div class="cancel-btn">
-        <%=link_to cancel_activity_path(activity.id), method: :delete  do %>
-          <i class="fas fa-minus"></i>
-        <% end %>
-
-            </div>
-        <%else%>
           <div class="join-btn">
          <%= link_to activity_post_activity_users_path(activity.id), method: :post  do %>
           <i class="fas fa-plus"></i>
