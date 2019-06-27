@@ -67,10 +67,10 @@ class ActivityPostsController < ApplicationController
 
     if @activity_post.save
       #alert
-      redirect_to date_activities_path
+      redirect_to my_hosting_path
     else
       #alert
-      redirect_to date_activities_path
+      redirect_to my_hosting_path
     end
   end
 
