@@ -47,7 +47,7 @@ activity_post_8 = ActivityPost.create!(description: "Do you dare to face me?", s
 activity_post_9 = ActivityPost.create!(description: "We need one more for a Padel match..", start_time: "2019-06-28 15:00", duration: 60, capacity: 4, title: "Padel", category_id: category_3.id , user_id: user_k.id)
 activity_post_10 = ActivityPost.create!(description: "Come along and take a refreshing dip!", start_time: "2019-06-28 11:15", duration: 30, capacity: 2, title: "Swimming", category_id: category_3.id , user_id: user_b.id, location: "Sockerbruket")
 activity_post_11 = ActivityPost.create!(description: "Join us for a early lunch run, everyone can join! ", start_time: "2019-06-28 10:15", duration: 45, capacity: 10, title: "Running", category_id: category_3.id , user_id: user_e.id)
-activity_post_12 = ActivityPost.create!(description: "Service Desk vs Everybody", start_time: "2019-06-28 10:00", duration: 90, capacity: 22, title: "Fotball", category_id: category_3.id , user_id: user_g.id, location: "Älmhult")
+activity_post_12 = ActivityPost.create!(description: "Service Desk vs Everybody", start_time: "2019-06-28 10:00", duration: 90, capacity: 22, title: "Football", category_id: category_3.id , user_id: user_g.id, location: "Älmhult")
 
 # Generate a number of bookings for walking
 booking_1 = ActivityUser.create!(user_id: user_m.id, activity_post_id: activity_post_1.id)
