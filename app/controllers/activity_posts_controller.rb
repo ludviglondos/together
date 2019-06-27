@@ -1,5 +1,5 @@
 class ActivityPostsController < ApplicationController
-  before_action :set_activity_post, only: [:show, :edit, :update, :destroy, :cancel_activity]
+  before_action :set_activity_post, only: [:show, :edit, :update, :destroy, :cancel_activity, :cancel_activity_hosting]
 
   def index
     activities_by_date
@@ -79,7 +79,7 @@ class ActivityPostsController < ApplicationController
 
   def update
     @activity_post.update(activity_post_params)
-    redirect_to my_activities_path
+    redirect_to my_hosting_path
   end
 
   def destroy
@@ -89,8 +89,22 @@ class ActivityPostsController < ApplicationController
   end
 
   def cancel_activity
-    @activity_post.activity_users.find_by(user_id: current_user.id).destroy
-    redirect_to date_activities_path
+    @activity_user = @activity_post.activity_users.find_by(user_id: current_user.id)
+    @activity_user.destroy
+    respond_to do |format|
+      format.html { redirect_to date_activities_path }
+      format.js  # <-- idem
+    end
+  end
+
+  def cancel_activity_hosting
+    @activity_user = @activity_post.activity_users.find_by(user_id: current_user.id)
+    @activity_user.destroy
+    respond_to do |format|
+      format.html { redirect_to my_hosting_path }
+      format.js  # <-- idem
+    end
+
   end
 
   private

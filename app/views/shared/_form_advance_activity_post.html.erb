@@ -10,11 +10,7 @@
         <%= f.input :duration, placeholder: 'Type in minutes the length of the activity' %>
         <%= f.input :description, as: :text, placeholder: 'Add the information of the activity..' %>
         <%= f.input :capacity, placeholder: 'Pick a number' %>
-        <% if params[:action] == 'edit' %>
-          <%= f.submit "Apply changes" %>
-        <% else %>
           <%= f.button :submit, "Add the activity"%>
-        <% end %>
         <% end %>
        </div>
    </div>

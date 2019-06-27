@@ -72,12 +72,15 @@ CARDS
     justify-content: center;
     align-items: center;
     text-decoration: none;s
+  h5 {
+     color: white;
    &:hover {
     cursor: pointer;
     }
-  h5 {
-     color: white;
   }
+  &:hover {
+    cursor: pointer;
+    }
 }
 
 .fas.fa-plus {
