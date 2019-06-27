@@ -13,7 +13,7 @@ puts "Database cleaned"
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #Generate some users
-user_a = User.create!(email: "test@email.com", password: "123456", first_name: "Ludvig", last_name: "L", username: "Laddy", url: "ludvig_londos.jpeg")
+user_a = User.create!(email: "test@email.com", password: "123456", first_name: "Ludvig", last_name: "L", username: "Laddy", url: "ludvig_londos.jpg")
 user_b = User.create!(email: "test2@email.com", password: "123456", first_name: "Karina", last_name: "H", username: "Pixelmybit", url: "female9.jpg")
 user_c = User.create!(email: "test3@email.com", password: "123456", first_name: "Johan", last_name: "H", username: "Johak11", url: "female5.jpg")
 user_d = User.create!(email: "test4@email.com", password: "123456", first_name: "Andrea", last_name: "M", username: "Andrea12", url: "female1.jpg")
