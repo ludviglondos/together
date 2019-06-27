@@ -43,7 +43,7 @@ activity_post_5 = ActivityPost.create!(description: "I want to have a fika and t
 activity_post_6 = ActivityPost.create!(description: "Kanelbulle? Ja tack!", start_time: "2019-06-28 12:30", duration: 45, capacity: 40, title: "Fika for the many", category_id: category_2.id , user_id: user_b.id)
 activity_post_7 = ActivityPost.create!(description: "I want to fika and voice my idea for a new app..", start_time: "2019-06-28 13:45", duration: 10, capacity: 2, title: "Fika and debate?", category_id: category_2.id , user_id: user_d.id, location: "Sockerbruket" )
 
-activity_post_8 = ActivityPost.create!(description: "Do you dare to face me?", start_time: "2019-06-28 15:35", duration: 180, capacity: 2, title: "Chess Match", category_id: category_3.id , user_id: user_e.id)
+activity_post_8 = ActivityPost.create!(description: "Do you dare to face me?", start_time: "2019-06-28 11:00", duration: 180, capacity: 2, title: "Chess Match", category_id: category_3.id , user_id: user_e.id)
 activity_post_9 = ActivityPost.create!(description: "We need one more for a Padel match..", start_time: "2019-06-28 15:00", duration: 60, capacity: 4, title: "Padel", category_id: category_3.id , user_id: user_k.id)
 activity_post_10 = ActivityPost.create!(description: "Come along and take a refreshing dip!", start_time: "2019-06-28 11:15", duration: 30, capacity: 2, title: "Swimming", category_id: category_3.id , user_id: user_b.id, location: "Sockerbruket")
 activity_post_11 = ActivityPost.create!(description: "Join us for a early lunch run, everyone can join! ", start_time: "2019-06-28 10:15", duration: 45, capacity: 10, title: "Running", category_id: category_3.id , user_id: user_e.id)
