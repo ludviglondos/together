@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   delete "cancel_activity/:id", to: 'activity_posts#cancel_activity', as: :cancel_activity
   get "activities-by-date", to: 'activity_posts#activities_by_date', as: :date_activities
   resources :activity_users, only: [:destroy ]
-  get    "my_upcoming_activities",      to: "activity_posts#show_my_upcoming"
+  # get    "my_upcoming_activities",      to: "activity_posts#show_my_upcoming"
   get    "my_hosting",      to: "activity_posts#my_hosting"
   get    "display_components",      to: "pages#display_components"
 end

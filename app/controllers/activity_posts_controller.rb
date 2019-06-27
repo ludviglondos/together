@@ -36,9 +36,9 @@ class ActivityPostsController < ApplicationController
     end
   end
 
-  def show_my_upcoming
-    set_vars_for_profile
-  end
+  # def show_my_upcoming
+  #   set_vars_for_profile
+  # end
 
   def my_hosting
     set_vars_for_profile
@@ -55,17 +55,19 @@ class ActivityPostsController < ApplicationController
       @activity_post.category = category
       case category.name
       when 'Walking' #Need to change to the correct logic when it is displayed on index page
-        @activity_post.update(description: "Lets take a Walk!", duration: 20, capacity: 10, title: "Lets take a Walk!")
+        @activity_post.update(description: "Lets take a Walk!", duration: 20, capacity: 10, title: "Walk!")
       when 'Fika'
-        @activity_post.update(description: "Lets have a Fika!", duration: 15, capacity: 2, title: "Lets have a Fika!")
+        @activity_post.update(description: "Lets have a Fika!", duration: 15, capacity: 2, title: "Fika!")
       when 'Sports'
         @activity_post.update(description: "Im planning to do the following sport activity, come join me!", duration: 60, capacity: 4, title: "Sport event!")
       end
     end
     @activity_post.user = current_user
+    @activity_user = ActivityUser.create(user: current_user, activity_post: @activity_post)
+
     if @activity_post.save
       #alert
-      redirect_to my_hosting_path
+      redirect_to date_activities_path
     else
       #alert
       redirect_to date_activities_path
@@ -83,7 +85,7 @@ class ActivityPostsController < ApplicationController
   def destroy
     @activity_post.destroy
     #add alert
-    redirect_to my_activities_path
+    redirect_to my_hosting_path
   end
 
   def cancel_activity
@@ -104,7 +106,8 @@ class ActivityPostsController < ApplicationController
   def set_vars_for_profile
     @categories = Category.all
     @activity_users = ActivityUser.all
-    @my_activity_post_joined = current_user.activity_users
-    @my_activity_posts_hosting = current_user.activity_posts.order(start_time: :asc)
+    # @my_activity_post_joined = current_user.activity_users
+    # @my_activity_posts_hosting = current_user.activity_posts.order(start_time: :asc)
+    @my_joined_activities = current_user.joined_activities.order(start_time: :asc)
   end
 end
