@@ -1,6 +1,6 @@
-<% @my_activity_posts_hosting.each do |activity| %>
+<% @my_joined_activities.each do |activity| %>
 <% if Date.today.strftime("%B%e") != activity.start_time.strftime("%B%e") %>
-  <div class="card-product">
+<div class="card-product">
         <%= image_tag activity.category.url_small, alt: "activity-category" %>
         <div class="card-content">
           <div class="card-product-infos">
@@ -22,7 +22,7 @@
                   <h2> Be the first to join!</h2>
                 </div>
               <% else %>
-               <% activity.users.first(3).each do |user| %>
+               <% activity.users.sample(3).each do |user| %>
               <div>
                 <%= image_tag user.url, alt: "avatar-bordered", class: "avatar-bordered" %>
               </div>
@@ -41,20 +41,27 @@
           </div>
         </div>
         <div class="container-btn">
+            <% if activity.user == current_user %>
           <div class="invite-btn">
-            <i class="fas fa-user-friends"></i>
+            <%= link_to edit_activity_post_path(activity.id) do  %>
+            <h5>Edit</h5>
+            <% end %>
           </div>
-          <div class="join-btn">
-            <% if activity.has_user?(current_user) %>
-        <%=link_to cancel_activity_path(activity.id), method: :delete  do %>
-          <i class="fas fa-check"></i>
-        <% end %>
-        <%else%>
+          <div class="destroy-btn">
          <%= link_to activity_post_activity_users_path(activity.id), method: :post  do %>
-          <i class="fas fa-plus"></i>
-          <% end %>
-          <% end %>
+              <i class="fas fa-times"></i>
+            <% end %>
           </div>
+        <%else%>
+        <div class="invite-btn">
+          <i class="fas fa-user-friends"></i>
+        </div>
+        <div class="cancel-btn">
+              <%=link_to cancel_activity_path(activity.id), method: :delete  do %>
+          <i class="fas fa-minus"></i>
+          <% end %>
+        </div>
+          <% end %>
         </div>
     </div>
     <% end %>

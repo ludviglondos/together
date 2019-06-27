@@ -11,4 +11,9 @@
       <div class="dashboard-my-hosting-container">
           <%= render 'shared/my_hostings_future' %>
       </div>
+      <div class="dashboard-activities-arrow-box">
+        <% if @my_joined_activities.count > 2 %>
+          <h2><i class="fas fa-angle-double-down"></i></h2>
+        <% end %>
+      </div>
 </div>

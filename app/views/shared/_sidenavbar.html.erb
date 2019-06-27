@@ -9,20 +9,15 @@
       </div>
     <% end %>
   </div>
+    <%= link_to my_hosting_path do %>
+      <div class="mylink_container">
+        <h4>My Events</h4>
+      </div>
+    <% end %>
     <%= link_to new_activity_post_path do %>
     <div class="mylink_container">
       <h4>Create an Event</h4>
     </div>
-    <% end %>
-     <%= link_to my_upcoming_activities_path do %>
-      <div class="mylink_container" id="mylink_container">
-        <h4>Joining</h4>
-      </div>
-    <% end %>
-    <%= link_to my_hosting_path do %>
-      <div class="mylink_container">
-        <h4>Hosting</h4>
-      </div>
     <% end %>
       <%= link_to root_path do %>
     <div class="mylink_container">

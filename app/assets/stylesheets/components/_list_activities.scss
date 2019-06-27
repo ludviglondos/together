@@ -14,7 +14,7 @@
 CARDS
 ******************************************/
 .container-btn {
-  background-color: #305f72;
+  // background-color: #305f72;
   border: none;
   color: white;
   text-align: center;
@@ -38,16 +38,30 @@ CARDS
 
 .join-btn {
   border: none;
+  background-color: #305f72;
     width: 100%;
     height: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(1);
-    transition: box-shadow 0.1s ease, transform 0.1s ease;
-    &:hover {
-      transform: scale(0.8);
-    }
+}
+.cancel-btn {
+  border: none;
+    width: 100%;
+    height: 65%;
+    display: flex;
+    background-color: #9a3c3c;
+    justify-content: center;
+    align-items: center;
+}
+.destroy-btn {
+    border: none;
+    width: 100%;
+    height: 65%;
+    display: flex;
+    background-color: #9a3c3c;
+    justify-content: center;
+    align-items: center;
 }
 
 .invite-btn {
@@ -57,20 +71,41 @@ CARDS
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;s
    &:hover {
-
     cursor: pointer;
     }
-}
-
-.fas.fa-check {
-  font-size: 22px;
-  color: white;
+  h5 {
+     color: white;
+  }
 }
 
 .fas.fa-plus {
     color: #fff;
     font-size: 30px;
+    transform: scale(1);
+    transition: box-shadow 0.1s ease, transform 0.1s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+}
+.fas.fa-minus {
+    color: #fff;
+    font-size: 30px;
+    transform: scale(1);
+    transition: box-shadow 0.1s ease, transform 0.1s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+}
+.fas.fa-times {
+    color: #fff;
+    font-size: 30px;
+    transform: scale(1);
+    transition: box-shadow 0.1s ease, transform 0.1s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
 }
 
 .fas.fa-map-marker-alt {
@@ -100,7 +135,9 @@ CARDS
     align-items: center;
     margin-top: 10px;
 }
-
+.card-users-joined {
+  margin-left: 10px;
+}
 .card-users-joined h2 {
     font-size: 14px !important;
     font-weight: 400;
