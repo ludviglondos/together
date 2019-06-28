@@ -59,7 +59,7 @@ class ActivityPostsController < ApplicationController
       when 'Fika'
         @activity_post.update(description: "Lets have a Fika!", duration: 15, capacity: 2, title: "Fika!")
       when 'Sports'
-        @activity_post.update(description: "Im planning to do the following sport activity, come join me!", duration: 60, capacity: 4, title: "Sport event!")
+        @activity_post.update(description: "Im planning to do the following sport activity, come join me!", duration: 60, capacity: 4, title: "Sport event!", url_extra: "https://images.unsplash.com/photo-1527634311077-9943f7df34e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
       end
     end
     @activity_post.user = current_user

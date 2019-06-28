@@ -1,7 +1,13 @@
 <% @my_joined_activities.each do |activity| %>
 <% if Date.today.strftime("%B%e") != activity.start_time.strftime("%B%e") %>
  <div class="card-product" id="card-activity-<%= activity.id %>">
+  <% if activity.category.name == "Sports" %>
+        <div class="sport-cards">
+          <%= image_tag activity.url_extra, alt: "activity-category"%>
+        </div>
+          <% else %>
         <%= image_tag activity.category.url_small, alt: "activity-category" %>
+        <% end %>
         <div class="card-content">
           <div class="card-product-infos">
             <div>
