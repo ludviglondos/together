@@ -35,8 +35,8 @@ category_3 = Category.create!(name: "Sports", url: "https://images.unsplash.com/
 
 # Generate a number of test activities for the 28th june
 activity_post_1 = ActivityPost.create!(description: "I plan to take a walk to the pier and back again", start_time: "2019-06-28 12:45", duration: 15, capacity: 10, title: "Walk and not talk", category_id: category_1.id , user_id: user_a.id, location: "Sockerbruket")
-activity_post_2 = ActivityPost.create!(description: "Lets do some power walking!", start_time: "2019-06-28 11:00", duration: 20, capacity: 10, title: "Talk and walk", category_id: category_1.id , user_id: user_i.id)
-activity_post_3 = ActivityPost.create!(description: "How about a walk around the IKEA building", start_time: "2019-06-28 14:40", duration: 30, capacity: 5, title: "Walk and talk", category_id: category_1.id , user_id: user_j.id ,location: "Sockerbruket")
+activity_post_2 = ActivityPost.create!(description: "Lets do some power walking!", start_time: "2019-06-28 13:00", duration: 20, capacity: 10, title: "Talk and walk", category_id: category_1.id , user_id: user_i.id)
+activity_post_3 = ActivityPost.create!(description: "How about a walk around the IKEA building", start_time: "2019-06-28 11:00", duration: 30, capacity: 5, title: "Walk and talk", category_id: category_1.id , user_id: user_j.id ,location: "Sockerbruket")
 activity_post_4 = ActivityPost.create!(description: "Anyone want to go to the beach?", start_time: "2019-06-28 12:30", duration: 10, capacity: 5, title: "Walk and talk", category_id: category_1.id , user_id: user_b.id)
 
 activity_post_5 = ActivityPost.create!(description: "I want to have a fika and talk about the news", start_time: "2019-06-28 10:30", duration: 30, capacity: 2, title: "Just fika", category_id: category_2.id , user_id: user_g.id)
